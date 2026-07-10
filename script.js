@@ -41,10 +41,22 @@ const events = [
                 icon: 'fa-route',
                 type: 'steps',
                 steps: [
-                    { icon: 'fa-magnifying-glass', title: 'Pick your challenge', text: 'Choose a theme area aligned with "Imagining an Impactful Future."' },
-                    { icon: 'fa-wand-magic-sparkles', title: 'Design your solution', text: 'App, platform, AI tool, IoT prototype, or robotics concept.' },
+                    {
+                        icon: 'fa-magnifying-glass',
+                        title: 'Pick your challenge',
+                        text: 'Choose a theme area aligned with "Imagining an Impactful Future."',
+                    },
+                    {
+                        icon: 'fa-wand-magic-sparkles',
+                        title: 'Design your solution',
+                        text: 'App, platform, AI tool, IoT prototype, or robotics concept.',
+                    },
                     { icon: 'fa-cloud-arrow-up', title: 'Submit online', text: '8-slide deck · Mon, Aug 6, 6 PM IST.' },
-                    { icon: 'fa-presentation-screen', title: 'Grand finale', text: 'Tue, Aug 18 · 6 min pitch + 4 min Q&A.' },
+                    {
+                        icon: 'fa-presentation-screen',
+                        title: 'Grand finale',
+                        text: 'Tue, Aug 18 · 6 min pitch + 4 min Q&A.',
+                    },
                 ],
             },
             {
@@ -177,10 +189,22 @@ const events = [
                 icon: 'fa-route',
                 type: 'steps',
                 steps: [
-                    { icon: 'fa-envelope-open-text', title: 'Challenge revealed', text: 'Theme-aligned statement given at competition start.' },
-                    { icon: 'fa-code', title: '2-hour build', text: 'Investigate, brainstorm, develop with any AI tools.' },
-                    { icon: 'fa-cloud-arrow-up', title: 'Submit MVP', text: 'Digital product + one-page deck via portal.' },
-                    { icon: 'fa-desktop', title: 'Live demo', text: '5 min product demo + 3 min judges\' Q&A.' },
+                    {
+                        icon: 'fa-envelope-open-text',
+                        title: 'Challenge revealed',
+                        text: 'Theme-aligned statement given at competition start.',
+                    },
+                    {
+                        icon: 'fa-code',
+                        title: '2-hour build',
+                        text: 'Investigate, brainstorm, develop with any AI tools.',
+                    },
+                    {
+                        icon: 'fa-cloud-arrow-up',
+                        title: 'Submit MVP',
+                        text: 'Digital product + one-page deck via portal.',
+                    },
+                    { icon: 'fa-desktop', title: 'Live demo', text: "5 min product demo + 3 min judges' Q&A." },
                 ],
             },
             {
@@ -219,8 +243,24 @@ const events = [
                 icon: 'fa-toolbox',
                 type: 'tool-groups',
                 groups: [
-                    { icon: 'fa-robot', title: 'AI Assistants', items: ['ChatGPT', 'Microsoft Copilot', 'Claude', 'Gemini'] },
-                    { icon: 'fa-laptop-code', title: 'Dev Platforms', items: ['Bolt.new', 'Lovable', 'Firebase Studio', 'Cursor', 'Windsurf', 'Replit AI', 'Vercel v0'] },
+                    {
+                        icon: 'fa-robot',
+                        title: 'AI Assistants',
+                        items: ['ChatGPT', 'Microsoft Copilot', 'Claude', 'Gemini'],
+                    },
+                    {
+                        icon: 'fa-laptop-code',
+                        title: 'Dev Platforms',
+                        items: [
+                            'Bolt.new',
+                            'Lovable',
+                            'Firebase Studio',
+                            'Cursor',
+                            'Windsurf',
+                            'Replit AI',
+                            'Vercel v0',
+                        ],
+                    },
                     { icon: 'fa-palette', title: 'Design', items: ['Figma AI', 'Canva AI'] },
                 ],
                 note: 'Any publicly available AI tool that complies with rules is permitted.',
@@ -240,7 +280,7 @@ const events = [
             },
             {
                 id: 'score',
-                label: 'How You\'re Scored',
+                label: "How You're Scored",
                 icon: 'fa-chart-simple',
                 type: 'scores',
                 scores: [
@@ -258,10 +298,38 @@ const events = [
                 icon: 'fa-scale-balanced',
                 type: 'rule-groups',
                 groups: [
-                    { icon: 'fa-gavel', title: 'General', items: ['One team per school', 'Build only during competition', 'Internet provided — bring laptop & charger'] },
-                    { icon: 'fa-robot', title: 'AI Usage', items: ['Disclose all AI tools', 'Explain AI-generated code if asked', 'Judges may verify understanding'] },
-                    { icon: 'fa-box', title: 'Product', items: ['No pre-built solutions', 'Templates & open-source OK with attribution', 'Core functionality must be demonstrated'] },
-                    { icon: 'fa-handshake', title: 'Conduct', items: ['Team-only collaboration', 'Academic integrity required', 'Judges\' decision is final'] },
+                    {
+                        icon: 'fa-gavel',
+                        title: 'General',
+                        items: [
+                            'One team per school',
+                            'Build only during competition',
+                            'Internet provided — bring laptop & charger',
+                        ],
+                    },
+                    {
+                        icon: 'fa-robot',
+                        title: 'AI Usage',
+                        items: [
+                            'Disclose all AI tools',
+                            'Explain AI-generated code if asked',
+                            'Judges may verify understanding',
+                        ],
+                    },
+                    {
+                        icon: 'fa-box',
+                        title: 'Product',
+                        items: [
+                            'No pre-built solutions',
+                            'Templates & open-source OK with attribution',
+                            'Core functionality must be demonstrated',
+                        ],
+                    },
+                    {
+                        icon: 'fa-handshake',
+                        title: 'Conduct',
+                        items: ['Team-only collaboration', 'Academic integrity required', "Judges' decision is final"],
+                    },
                 ],
             },
         ],
@@ -299,7 +367,7 @@ const events = [
                 id: 'mission',
                 label: 'The Mission',
                 icon: 'fa-camera-retro',
-                hook: 'Don\'t just edit a photo — transform visual evidence into a campaign for change.',
+                hook: "Don't just edit a photo — transform visual evidence into a campaign for change.",
                 callout: 'Thoughtful communication and purposeful design over artistic perfection.',
             },
             {
@@ -308,9 +376,24 @@ const events = [
                 icon: 'fa-route',
                 type: 'timeline',
                 items: [
-                    { icon: 'fa-download', date: 'Aug 1', label: 'Images drop', text: 'Download 2–3 curated photos from the website.' },
-                    { icon: 'fa-paintbrush', date: 'Aug 1–6', label: 'Create', text: 'Design campaign poster + 2-min explainer video.' },
-                    { icon: 'fa-cloud-arrow-up', date: 'Aug 6', label: 'Submit', text: 'Upload by 6 PM IST via official form.' },
+                    {
+                        icon: 'fa-download',
+                        date: 'Aug 1',
+                        label: 'Images drop',
+                        text: 'Download 2–3 curated photos from the website.',
+                    },
+                    {
+                        icon: 'fa-paintbrush',
+                        date: 'Aug 1–6',
+                        label: 'Create',
+                        text: 'Design campaign poster + 2-min explainer video.',
+                    },
+                    {
+                        icon: 'fa-cloud-arrow-up',
+                        date: 'Aug 6',
+                        label: 'Submit',
+                        text: 'Upload by 6 PM IST via official form.',
+                    },
                     { icon: 'fa-trophy', date: 'Aug 18', label: 'Finale', text: '5 min presentation + 3 min Q&A.' },
                 ],
             },
@@ -345,11 +428,27 @@ const events = [
                 icon: 'fa-clapperboard',
                 type: 'steps',
                 steps: [
-                    { icon: 'fa-id-card', title: 'Introduction', text: 'Name, school, campaign title, selected theme.' },
-                    { icon: 'fa-exclamation-circle', title: 'The issue', text: 'Significance, audience, facts & statistics.' },
+                    {
+                        icon: 'fa-id-card',
+                        title: 'Introduction',
+                        text: 'Name, school, campaign title, selected theme.',
+                    },
+                    {
+                        icon: 'fa-exclamation-circle',
+                        title: 'The issue',
+                        text: 'Significance, audience, facts & statistics.',
+                    },
                     { icon: 'fa-bullseye', title: 'Target audience', text: 'Who, what change, and why it matters.' },
-                    { icon: 'fa-image', title: 'Campaign visual', text: 'Final poster — photo, illustration, typography, mixed media.' },
-                    { icon: 'fa-pen-ruler', title: 'Design rationale', text: 'Concept, colour, typography, composition choices.' },
+                    {
+                        icon: 'fa-image',
+                        title: 'Campaign visual',
+                        text: 'Final poster — photo, illustration, typography, mixed media.',
+                    },
+                    {
+                        icon: 'fa-pen-ruler',
+                        title: 'Design rationale',
+                        text: 'Concept, colour, typography, composition choices.',
+                    },
                     { icon: 'fa-quote-right', title: 'Credits', text: 'Image credits, AI tools, software used.' },
                 ],
             },
@@ -462,7 +561,11 @@ const events = [
                 steps: [
                     { icon: 'fa-box-open', title: 'Kit briefing', text: 'Every team gets the same material kit.' },
                     { icon: 'fa-hammer', title: '2-hour build', text: 'Brainstorm, design, build, test, refine.' },
-                    { icon: 'fa-microphone', title: 'Present & perform', text: '1–2 min talk · 1 min music · 2 min Q&A.' },
+                    {
+                        icon: 'fa-microphone',
+                        title: 'Present & perform',
+                        text: '1–2 min talk · 1 min music · 2 min Q&A.',
+                    },
                 ],
             },
             {
@@ -519,7 +622,7 @@ const events = [
             },
             {
                 id: 'score',
-                label: 'How You\'re Scored',
+                label: "How You're Scored",
                 icon: 'fa-chart-simple',
                 type: 'scores',
                 scores: [
@@ -536,9 +639,33 @@ const events = [
                 icon: 'fa-scale-balanced',
                 type: 'rule-groups',
                 groups: [
-                    { icon: 'fa-school', title: 'Team', items: ['One team per school', 'All members must participate', 'Build entirely during competition'] },
-                    { icon: 'fa-volume-high', title: 'Instruments', items: ['Every instrument must make audible sound', 'At least 4 kit materials required', 'One or more instruments allowed'] },
-                    { icon: 'fa-shield', title: 'Safety', items: ['Maintain safety throughout', 'No laptops, phones, or AI needed', 'Judges\' decision is final'] },
+                    {
+                        icon: 'fa-school',
+                        title: 'Team',
+                        items: [
+                            'One team per school',
+                            'All members must participate',
+                            'Build entirely during competition',
+                        ],
+                    },
+                    {
+                        icon: 'fa-volume-high',
+                        title: 'Instruments',
+                        items: [
+                            'Every instrument must make audible sound',
+                            'At least 4 kit materials required',
+                            'One or more instruments allowed',
+                        ],
+                    },
+                    {
+                        icon: 'fa-shield',
+                        title: 'Safety',
+                        items: [
+                            'Maintain safety throughout',
+                            'No laptops, phones, or AI needed',
+                            "Judges' decision is final",
+                        ],
+                    },
                 ],
             },
         ],
@@ -574,9 +701,6 @@ const chapterLock = {
     progress: 0,
     touchY: null,
     active: false,
-    pinnedTop: null,
-    pendingDelta: 0,
-    rafId: 0,
 };
 
 const scrollState = {
@@ -930,7 +1054,10 @@ function renderGroups(groups, note) {
 
 function renderFinale(chapter) {
     const meta = chapter.cards
-        .map((card) => `<span><i class="fa-solid ${card.icon}" aria-hidden="true"></i>${card.label}: <strong>${card.value}</strong></span>`)
+        .map(
+            (card) =>
+                `<span><i class="fa-solid ${card.icon}" aria-hidden="true"></i>${card.label}: <strong>${card.value}</strong></span>`,
+        )
         .join('');
     const scores = chapter.scores ? renderScorePanel(chapter.scores) : '';
     const note = chapter.note ? `<p class="modal-aside">${chapter.note}</p>` : '';
@@ -1069,48 +1196,24 @@ function setupModal() {
     dialog.addEventListener('close', unlockBodyForModal);
 }
 
-function pinChapterScroll(top) {
-    if (Math.abs(window.scrollY - top) <= 1) {
-        chapterLock.pinnedTop = top;
-        return;
-    }
-    window.scrollTo({ top, left: 0, behavior: 'auto' });
-    chapterLock.pinnedTop = top;
-}
-
 function updateChapter() {
-    const metrics = getPhilosophyMetrics();
-    if (!metrics) return;
-    const { top, bottom } = metrics;
-    const y = window.scrollY;
-
-    if (y < top - 48) {
-        if (chapterLock.progress !== 0) {
-            chapterLock.progress = 0;
-            chapterLock.active = false;
-            chapterLock.pinnedTop = null;
-            setChapterProgress(0);
-        }
-        return;
+    const section = document.querySelector('.philosophy');
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    if (window.scrollY < top - 2) chapterLock.progress = 0;
+    if (window.scrollY > bottom - 2) {
+        chapterLock.progress = 1;
+        chapterLock.active = false;
     }
-    if (y > bottom + 24) {
-        if (chapterLock.progress !== 1) {
-            chapterLock.progress = 1;
-            chapterLock.active = false;
-            chapterLock.pinnedTop = null;
-            setChapterProgress(1);
-        }
-        return;
-    }
-
     if (
         chapterLock.active &&
         chapterLock.progress > 0 &&
         chapterLock.progress < 1 &&
-        Math.abs(y - top) > 2
+        Math.abs(window.scrollY - top) > 2
     ) {
-        pinChapterScroll(top);
+        window.scrollTo({ top, left: 0, behavior: 'auto' });
     }
+    setChapterProgress(chapterLock.progress);
 }
 
 let lastChapterIndex = -1;
@@ -1119,16 +1222,11 @@ let lastChapterLocalKey = '';
 function setChapterProgress(progress) {
     chapterLock.progress = Math.min(1, Math.max(0, progress));
     const progressValue = Math.min(0.999, chapterLock.progress);
-    const metrics = getPhilosophyMetrics();
-    if (!metrics) return;
-    const { section } = metrics;
+    const section = document.querySelector('.philosophy');
     const scaled = Math.min(0.999, Math.max(0, progressValue));
     const index = Math.min(chapters.length - 1, Math.floor(scaled * chapters.length));
     const local = scaled * chapters.length - index;
-    const localKey = `${index}:${local.toFixed(2)}`;
-
-    if (index !== lastChapterIndex) {
-        lastChapterIndex = index;
+    if (Number(section.dataset.chapterIndex) !== index) {
         section.dataset.chapterIndex = index;
         const copy = document.getElementById('chapter-copy');
         const number = document.getElementById('chapter-number');
@@ -1139,102 +1237,59 @@ function setChapterProgress(progress) {
             copy.classList.remove('switching');
             number.classList.remove('switching');
         }, 160);
-        document.querySelectorAll('.chapter-rail b').forEach((bar, i) => {
-            bar.classList.toggle('complete', i < index);
-            bar.classList.toggle('active', i === index);
-            bar.style.setProperty(
-                '--rail-progress',
-                i < index ? '100%' : i === index ? `${Math.max(8, local * 100)}%` : '0%',
-            );
-        });
     }
-
-    if (localKey !== lastChapterLocalKey) {
-        lastChapterLocalKey = localKey;
-        document.querySelectorAll('.chapter-rail b').forEach((bar, i) => {
-            if (i === index) {
-                bar.style.setProperty('--rail-progress', `${Math.max(8, local * 100)}%`);
-            }
-        });
-        document.querySelector('.story-glow').style.setProperty('--story-glow-x', `${8 - progressValue * 32}%`);
-        document.getElementById('chapter-number').style.setProperty('--chapter-number-x', `${(local - 0.5) * -36}px`);
-        const field = section.querySelector('.geo-field');
-        if (field) field.style.setProperty('--geo-y', `${-progressValue * 12}%`);
-    }
-}
-
-function shouldEngageChapterLock(deltaY) {
-    const metrics = getPhilosophyMetrics();
-    if (!metrics) return false;
-    const { top, bottom } = metrics;
-    const y = window.scrollY;
-    const predictedY = y + deltaY;
-    const nearTop = Math.abs(y - top) < 12;
-    const crossingFromAbove = deltaY > 0 && y < top && predictedY >= top - 2;
-    const crossingFromBelow = deltaY < 0 && y > top && predictedY <= top + 2;
-    const insideLock =
-        nearTop &&
-        y >= top - 2 &&
-        y < bottom &&
-        ((deltaY > 0 && chapterLock.progress < 1) || (deltaY < 0 && chapterLock.progress > 0));
-
-    if (!crossingFromAbove && !crossingFromBelow && !insideLock) return false;
-    if (deltaY > 0 && chapterLock.progress >= 1) return false;
-    if (deltaY < 0 && chapterLock.progress <= 0 && nearTop) return false;
-    return true;
-}
-
-function applyChapterDelta(deltaY) {
-    const metrics = getPhilosophyMetrics();
-    if (!metrics) return;
-    const { top } = metrics;
-    const y = window.scrollY;
-    const crossingFromAbove = deltaY > 0 && y < top;
-    const enteringFromBelow = deltaY < 0 && y > top;
-
-    if (crossingFromAbove) chapterLock.progress = 0;
-    if (enteringFromBelow && chapterLock.progress <= 0.02) chapterLock.progress = 1;
-
-    chapterLock.active = true;
-    pinChapterScroll(top);
-    const step = Math.sign(deltaY) * Math.min(Math.abs(deltaY) / 2200, 0.08);
-    setChapterProgress(chapterLock.progress + step);
-    if (chapterLock.progress <= 0 || chapterLock.progress >= 1) {
-        chapterLock.active = false;
-        chapterLock.pinnedTop = null;
-    }
-}
-
-function flushChapterDelta() {
-    chapterLock.rafId = 0;
-    const deltaY = chapterLock.pendingDelta;
-    chapterLock.pendingDelta = 0;
-    if (!deltaY) return;
-    applyChapterDelta(deltaY);
-}
-
-function queueChapterDelta(deltaY) {
-    chapterLock.pendingDelta += deltaY;
-    if (!chapterLock.rafId) {
-        chapterLock.rafId = requestAnimationFrame(flushChapterDelta);
-    }
+    document.querySelectorAll('.chapter-rail b').forEach((bar, i) => {
+        bar.classList.toggle('complete', i < index);
+        bar.classList.toggle('active', i === index);
+        bar.style.setProperty(
+            '--rail-progress',
+            i < index ? '100%' : i === index ? `${Math.max(8, local * 100)}%` : '0%',
+        );
+    });
+    document.querySelector('.story-glow').style.setProperty('--story-glow-x', `${8 - progressValue * 32}%`);
+    document.getElementById('chapter-number').style.setProperty('--chapter-number-x', `${(local - 0.5) * -36}px`);
+    const field = section.querySelector('.geo-field');
+    if (field) field.style.setProperty('--geo-y', `${-progressValue * 12}%`);
 }
 
 function handleChapterDelta(deltaY) {
-    if (prefersReducedMotion || !shouldEngageChapterLock(deltaY)) return false;
-    queueChapterDelta(deltaY);
+    const section = document.querySelector('.philosophy');
+    if (!section) return false;
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    const y = window.scrollY;
+    const predictedY = y + deltaY;
+    const nearTop = Math.abs(y - top) < 4;
+    const crossingFromAbove = deltaY > 0 && y < top && predictedY >= top;
+    const crossingFromBelow = deltaY < 0 && y > top && predictedY <= top;
+    const enteringFromAbove = deltaY > 0 && (crossingFromAbove || (y >= top - 4 && y < bottom));
+    const enteringFromBelow = deltaY < 0 && (crossingFromBelow || (y <= bottom + 4 && y > top));
+    const insideLock =
+        nearTop && ((deltaY > 0 && chapterLock.progress < 1) || (deltaY < 0 && chapterLock.progress > 0));
+
+    if (!enteringFromAbove && !enteringFromBelow && !insideLock) return false;
+    if (deltaY > 0 && chapterLock.progress >= 1) return false;
+    if (deltaY < 0 && chapterLock.progress <= 0 && nearTop) return false;
+
+    if (crossingFromAbove) chapterLock.progress = 0;
+    if (enteringFromBelow && chapterLock.progress <= 0.02) chapterLock.progress = 1;
+    chapterLock.active = true;
+    window.scrollTo({ top, left: 0, behavior: 'auto' });
+    const step = Math.sign(deltaY) * Math.min(Math.abs(deltaY) / 1500, 0.105);
+    setChapterProgress(chapterLock.progress + step);
+    if (chapterLock.progress <= 0 || chapterLock.progress >= 1) {
+        chapterLock.active = false;
+    }
     return true;
 }
 
 function setupChapterScrollLock() {
-    if (prefersReducedMotion) return;
-
     window.addEventListener(
         'wheel',
         (event) => {
             if (handleChapterDelta(event.deltaY)) event.preventDefault();
         },
-        { passive: false },
+        { passive: false, capture: true },
     );
 
     window.addEventListener(
@@ -1252,18 +1307,9 @@ function setupChapterScrollLock() {
             const nextY = event.touches[0]?.clientY ?? chapterLock.touchY;
             const deltaY = chapterLock.touchY - nextY;
             chapterLock.touchY = nextY;
-            if (Math.abs(deltaY) > 2 && handleChapterDelta(deltaY * 2)) event.preventDefault();
+            if (Math.abs(deltaY) > 2 && handleChapterDelta(deltaY * 2.4)) event.preventDefault();
         },
-        { passive: false },
-    );
-
-    window.addEventListener(
-        'resize',
-        () => {
-            scrollState.philosophy = null;
-            scrollState.timeline = null;
-        },
-        { passive: true },
+        { passive: false, capture: true },
     );
 }
 
@@ -1362,8 +1408,7 @@ function updateTimelineProgress() {
     const firstCenter = itemRects[0].top + itemRects[0].height / 2;
     const lastCenter = itemRects[itemRects.length - 1].top + itemRects[itemRects.length - 1].height / 2;
     const milestoneSpan = lastCenter - firstCenter;
-    const scrollProgress =
-        milestoneSpan > 0 ? Math.min(1, Math.max(0, (anchor - firstCenter) / milestoneSpan)) : 0;
+    const scrollProgress = milestoneSpan > 0 ? Math.min(1, Math.max(0, (anchor - firstCenter) / milestoneSpan)) : 0;
     const maxCopyTravel = Math.max(0, list.offsetHeight - copy.offsetHeight);
     const copyY = Math.round(scrollProgress * maxCopyTravel);
     const numberX = Math.round((local - 0.5) * -28);
