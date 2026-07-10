@@ -152,7 +152,7 @@ const events = [
         no: '02',
         name: 'AI for Good Lab',
         tag: 'Think Fast. Build Smart. Create Impact.',
-        mode: 'On-site',
+        mode: 'Hybrid',
         desc: 'Harness the power of AI to rapidly create a functional digital solution for a real-world challenge.',
         long: 'Fast-paced live challenge — receive a theme-aligned statement, build a functional MVP with AI-assisted tools in 2 hours, then demo to judges.',
         meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', '5 min demo + 3 min Q&A'],
@@ -338,7 +338,7 @@ const events = [
         no: '03',
         name: 'Through the Lens',
         tag: 'Every Picture Inspires Change.',
-        mode: 'Hybrid',
+        mode: 'On-site',
         desc: 'Create an original campaign poster or visual using curated challenge images released on the website.',
         long: 'Visual storytelling challenge — transform curated photographs into a campaign that informs, inspires, and motivates audiences toward an impactful future.',
         meta: ['1-2 participants', 'Grades IX-XII', 'Poster + 2 min video', 'No AI artwork'],
@@ -1390,7 +1390,7 @@ function updateTimelineProgress() {
             bar.classList.toggle('active', index === activeIndex);
             bar.style.setProperty(
                 '--rail-progress',
-                index < activeIndex ? '100%' : index === activeIndex ? `${Math.max(8, local * 100)}%` : '0%',
+                index < activeIndex ? '100%' : index === activeIndex ? `${Math.max(8, progress * 100)}%` : '0%',
             );
         });
         if (section) section.dataset.timelineIndex = String(activeIndex);
@@ -1405,18 +1405,8 @@ function updateTimelineProgress() {
         }, 160);
     }
 
-    const firstCenter = itemRects[0].top + itemRects[0].height / 2;
-    const lastCenter = itemRects[itemRects.length - 1].top + itemRects[itemRects.length - 1].height / 2;
-    const milestoneSpan = lastCenter - firstCenter;
-    const scrollProgress = milestoneSpan > 0 ? Math.min(1, Math.max(0, (anchor - firstCenter) / milestoneSpan)) : 0;
-    const maxCopyTravel = Math.max(0, list.offsetHeight - copy.offsetHeight);
-    const copyY = Math.round(scrollProgress * maxCopyTravel);
     const numberX = Math.round((local - 0.5) * -28);
 
-    if (copyY !== cache.lastCopyY) {
-        cache.lastCopyY = copyY;
-        copy.style.setProperty('--timeline-copy-y', `${copyY}px`);
-    }
     if (numberX !== cache.lastNumberX) {
         cache.lastNumberX = numberX;
         copy.style.setProperty('--timeline-number-x', `${numberX}px`);
@@ -1424,7 +1414,7 @@ function updateTimelineProgress() {
 
     const activeBar = rails[activeIndex];
     if (activeBar) {
-        activeBar.style.setProperty('--rail-progress', `${Math.max(8, local * 100)}%`);
+        activeBar.style.setProperty('--rail-progress', `${Math.max(8, progress * 100)}%`);
     }
 }
 
