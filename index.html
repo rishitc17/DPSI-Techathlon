@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>DPSI Techathlon 2026 | Imagining an Impactful Future</title>
+        <meta
+            name="description"
+            content="DPS International School Gurugram's Techathlon 2026: an inter-school technology festival for grades IX-XII on Tuesday, August 18, 2026."
+        />
+        <meta property="og:title" content="DPSI Techathlon 2026" />
+        <meta
+            property="og:description"
+            content="Imagining an Impactful Future: Investigate, Design, Create, and Reflect."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="assets/techathlon-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="assets/techathlon-logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <script>
+            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        </script>
+    </head>
+    <body>
+        <div class="ambient-field" aria-hidden="true">
+            <div class="ambient-grid"></div>
+            <div class="ambient-orb ambient-orb-a"></div>
+            <div class="ambient-orb ambient-orb-b"></div>
+        </div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+
+        <header class="site-header">
+            <a class="brand" href="#top" aria-label="DPS International School Gurugram — Techathlon home">
+                <img src="assets/dpsi-logo.svg" alt="DPS International School Gurugram" />
+            </a>
+            <nav class="desktop-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#glimpse">Glimpse</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <span class="header-mark" aria-hidden="true">Techathlon <em>2026</em></span>
+        </header>
+
+        <main>
+            <section class="hero" id="top">
+                <canvas id="hero-canvas" aria-hidden="true"></canvas>
+                <div class="scanline" aria-hidden="true"></div>
+                <aside class="hero-meta reveal">
+                    <dl>
+                        <div>
+                            <dt>Edition</dt>
+                            <dd>4th Annual · 2026</dd>
+                        </div>
+                        <div>
+                            <dt>Date</dt>
+                            <dd>18 . 08 . 2026</dd>
+                        </div>
+                        <div>
+                            <dt>Venue</dt>
+                            <dd>DPSI, Gurugram</dd>
+                        </div>
+                        <div>
+                            <dt>Grades</dt>
+                            <dd>IX - XII</dd>
+                        </div>
+                    </dl>
+                </aside>
+                <div class="hero-copy">
+                    <div class="hero-intro reveal">
+                        <p class="hero-presents">
+                            DPS International School, Gurugram <span>presents</span>
+                        </p>
+                        <p class="hero-edition">Edition 2026 · 4th Annual</p>
+                        <p class="hero-theme" aria-label="Festival theme: Imagining an Impactful Future">
+                            <span class="hero-theme-label">Theme</span>
+                            <em>Imagining an Impactful Future</em>
+                        </p>
+                    </div>
+                    <h1 class="hero-title reveal"><span>Tech</span><em>athlon.</em></h1>
+                    <div class="hero-actions reveal">
+                        <p>
+                            An inter-school technology festival where young innovators use empathy, inquiry, and
+                            purpose to create meaningful impact.
+                        </p>
+                        <div>
+                            <a
+                                class="button button-primary"
+                                href="https://forms.gle/S8nZDLmEuoSoqiTy7"
+                                target="_blank"
+                                rel="noreferrer"
+                                >Register Now <i class="fa-solid fa-user-plus" aria-hidden="true"></i
+                            ></a>
+                            <a class="button button-outline" href="#events"
+                                ><i class="fa-solid fa-book-open" aria-hidden="true"></i> View Events</a
+                            >
+                        </div>
+                    </div>
+                    <div class="stats reveal" aria-label="Techathlon at a glance">
+                        <div><strong data-count="04">00</strong><span>Events</span></div>
+                        <div><strong data-count="300" data-suffix="+">000</strong><span>Participants</span></div>
+                        <div><strong data-count="25" data-suffix="+">00</strong><span>Schools</span></div>
+                        <div><strong data-count="01">00</strong><span>Goal</span></div>
+                    </div>
+                    <p class="punchline reveal" aria-label="Our approach">
+                        <span>Investigate</span><i aria-hidden="true">→</i><span>Design</span><i aria-hidden="true"
+                            >→</i
+                        ><span>Create</span><i aria-hidden="true">→</i><span>Reflect</span>
+                    </p>
+                </div>
+                <p class="scroll-cue">scroll down</p>
+            </section>
+
+            <section class="marquee" aria-label="Event highlights">
+                <div class="ticker">
+                    <span>Imagining an Impactful Future</span><b>*</b> <span>Tuesday, August 18, 2026</span><b>*</b>
+                    <span>DPS International School, Gurugram</span><b>*</b> <span>Grades IX-XII</span><b>*</b>
+                </div>
+                <div class="ticker ticker-reverse">
+                    <span>Investigate</span><b>→</b> <span>Design</span><b>→</b> <span>Create</span><b>→</b>
+                    <span>Reflect</span><b>→</b>
+                </div>
+            </section>
+
+            <section class="philosophy" id="philosophy">
+                <div class="philosophy-stage">
+                    <div class="geo-field" aria-hidden="true"></div>
+                    <div class="story-glow" aria-hidden="true"></div>
+                    <div class="section-kicker">Our Philosophy</div>
+                    <div class="chapter">
+                        <span class="chapter-number" id="chapter-number">01</span>
+                        <div class="chapter-copy" id="chapter-copy">
+                            <p class="mono">Chapter <span id="chapter-index">1</span> / 4</p>
+                            <h2 id="chapter-title">Investigate.</h2>
+                            <p id="chapter-body">
+                                Start by understanding the challenge — who is affected, what the problem truly is, and
+                                why it matters before any solution is built.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chapter-rail" aria-hidden="true">
+                        <div><span>01</span><b class="active"></b></div>
+                        <div><span>02</span><b></b></div>
+                        <div><span>03</span><b></b></div>
+                        <div><span>04</span><b></b></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section" id="about">
+                <div class="section-copy reveal">
+                    <p class="section-kicker">About</p>
+                    <h2>Where empathy <em>becomes</em> innovation.</h2>
+                    <p>
+                        DPS International School, Gurugram proudly presents Techathlon — the school's annual flagship
+                        technology event. Now in its <strong>4th annual edition</strong> in 2026, Techathlon has grown
+                        each year since 2023, bringing together students to innovate, collaborate, and solve meaningful
+                        real-world problems.
+                    </p>
+                    <p>
+                        Participants investigate authentic challenges, understand diverse perspectives, and design
+                        solutions that improve everyday experiences across education, healthcare, accessibility,
+                        sustainability, digital wellbeing, and community development.
+                    </p>
+                    <div class="about-facts">
+                        <div><span>Edition</span><strong>4th Annual · 2026</strong></div>
+                        <div><span>Theme</span><strong>Imagining an Impactful Future</strong></div>
+                        <div><span>Format</span><strong>Hybrid</strong></div>
+                    </div>
+                </div>
+                <div class="signal-card tilt reveal">
+                    <div class="event-glyph" data-seed="7" data-mode="offline"></div>
+                    <footer>
+                        <div><span>Vision</span><strong>2026</strong></div>
+                        <small>DPSI . GGN</small>
+                    </footer>
+                </div>
+            </section>
+
+            <section class="events section" id="events">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="section-kicker">Programme</p>
+                        <h2>Four events.<br /><em>Choose Your Challenge.<br />Create Your Impact.</em></h2>
+                    </div>
+                </div>
+                <div class="event-groups" id="event-groups"></div>
+            </section>
+
+            <section class="glimpse section" id="glimpse" aria-labelledby="glimpse-heading">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="section-kicker">Gallery</p>
+                        <h2 id="glimpse-heading">A glimpse of<br /><em>Techathlon.</em></h2>
+                    </div>
+                    <p>Moments from past editions — innovation labs, creative challenges, cultural showcases, and pitches that brought the festival to life.</p>
+                </div>
+                <div class="glimpse-grid">
+                    <figure class="glimpse-item glimpse-item--feature reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-cultural-showcase.png"
+                                alt="Students performing a traditional dance on a blue-lit stage during Techathlon"
+                                width="960"
+                                height="720"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Cultural showcase</span>
+                            <span>Traditional dance on the Techathlon stage</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-music-production.png"
+                                alt="Student wearing headphones while working at a MIDI keyboard and laptop in the music production lab"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Digital music production</span>
+                            <span>SoundCraft in the D&amp;T lab</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-photo-editing.png"
+                                alt="Students at laptops editing photos during the Through the Lens challenge at workstation TECH09-02"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Photo editing challenge</span>
+                            <span>Through the Lens workstations</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item glimpse-item--wide glimpse-item--people reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-team.png"
+                                alt="Techathlon team members posing together in matching event t-shirts on the school steps"
+                                width="1024"
+                                height="682"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Team spirit</span>
+                            <span>Organizers on the DPSI steps</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-logic-gates.png"
+                                alt="Student presenting logic gate diagrams for AND and NAND gates during a classroom session"
+                                width="1024"
+                                height="682"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Logic gates workshop</span>
+                            <span>AND &amp; NAND on the whiteboard</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item glimpse-item--wide glimpse-item--people reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-awards.png"
+                                alt="Students receiving certificates on stage during the Techathlon awards ceremony"
+                                width="1024"
+                                height="682"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Awards ceremony</span>
+                            <span>Celebrating winners on stage</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-coding-lab.png"
+                                alt="Students coding at partitioned desks in the computer lab during a live Techathlon challenge"
+                                width="640"
+                                height="480"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Coding in action</span>
+                            <span>Live build sprint in the lab</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="glimpse-item glimpse-item--wide reveal">
+                        <div class="glimpse-frame">
+                            <img
+                                src="assets/glimpse-shark-tank-pitch.png"
+                                alt="Student team delivering a Shark Tank style presentation to judges during Techathlon"
+                                width="960"
+                                height="540"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="glimpse-overlay" aria-hidden="true"></div>
+                        </div>
+                        <figcaption class="glimpse-caption">
+                            <span class="glimpse-tag">Shark Tank pitch</span>
+                            <span>InnovateX finale presentations</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="timeline section" id="timeline">
+                <div class="section-copy timeline-copy reveal">
+                    <span class="timeline-copy-number" id="timeline-copy-number" aria-hidden="true">01</span>
+                    <p class="section-kicker">Schedule</p>
+                    <h2>Mark the<br /><em>calendar.</em></h2>
+                    <p class="timeline-copy-desc">
+                        Five milestones from registration to the grand finale. Schools should follow these dates in
+                        order — each step unlocks the next.
+                    </p>
+                    <p class="timeline-copy-phase" id="timeline-copy-phase" aria-live="polite">Registration</p>
+                    <div class="timeline-rail" aria-hidden="true">
+                        <div><span>01</span><b></b></div>
+                        <div><span>02</span><b></b></div>
+                        <div><span>03</span><b></b></div>
+                        <div><span>04</span><b></b></div>
+                        <div><span>05</span><b></b></div>
+                    </div>
+                    <a class="timeline-jump" href="#contact">Jump to quick reference & contact →</a>
+                </div>
+                <ol class="timeline-list">
+                    <li class="reveal timeline-milestone">
+                        <span class="timeline-step">01</span>
+                        <span class="timeline-phase">Registration</span>
+                        <time datetime="2026-07-31">Friday, July 31, 2026</time>
+                        <strong>Last day to register</strong>
+                        <span>Schools complete team registrations for all events. No entries accepted after this date.</span>
+                    </li>
+                    <li class="reveal timeline-milestone">
+                        <span class="timeline-step">02</span>
+                        <span class="timeline-phase">Resources</span>
+                        <time datetime="2026-08-01">Saturday, August 1, 2026</time>
+                        <strong>Through the Lens images released</strong>
+                        <span>Curated challenge image sets go live on the official website for participating schools.</span>
+                    </li>
+                    <li class="reveal timeline-milestone">
+                        <span class="timeline-step">03</span>
+                        <span class="timeline-phase">Submissions</span>
+                        <time datetime="2026-08-06T18:00">Thursday, August 6, 2026 · 6:00 PM IST</time>
+                        <strong>Online submission deadline</strong>
+                        <span>InnovateX presentations and Through the Lens campaign work must be submitted by this time.</span>
+                    </li>
+                    <li class="reveal timeline-milestone">
+                        <span class="timeline-step">04</span>
+                        <span class="timeline-phase">Results</span>
+                        <time datetime="2026-08-10T14:00">Monday, August 10, 2026 · 2:00 PM IST</time>
+                        <strong>Preliminary results announced</strong>
+                        <span>Shortlisted teams and participants are notified. Prepare for the on-site finale.</span>
+                    </li>
+                    <li class="reveal timeline-milestone main-day">
+                        <span class="timeline-step">05</span>
+                        <span class="timeline-phase">Finale</span>
+                        <time datetime="2026-08-18">Tuesday, August 18, 2026</time>
+                        <strong>Grand finale at DPSI, Gurugram</strong>
+                        <span
+                            >Final presentations, live challenges, and on-site events for Grades IX–XII across all four
+                            events.</span
+                        >
+                    </li>
+                </ol>
+            </section>
+
+            <section class="register section" id="register">
+                <div class="ghost-word" aria-hidden="true">REGISTER</div>
+                <div class="section-copy reveal">
+                    <p class="section-kicker">Ready?</p>
+                    <h2>Step into an <em>impactful</em> future.</h2>
+                    <p>
+                        Registration closes Friday, July 31, 2026. Bring your team, curiosity, and a solution designed
+                        to create meaningful and lasting impact.
+                    </p>
+                    <div class="cta-row">
+                        <a
+                            class="button button-primary"
+                            href="https://forms.gle/S8nZDLmEuoSoqiTy7"
+                            target="_blank"
+                            rel="noreferrer"
+                            >Register Now <i class="fa-solid fa-user-plus" aria-hidden="true"></i
+                        ></a>
+                    </div>
+                </div>
+                <aside class="contact-card tilt reveal" id="contact">
+                    <div class="contact-block">
+                        <h3>Quick reference</h3>
+                        <p class="contact-note">A snapshot of key dates — see the full timeline above for details.</p>
+                        <ul class="deadline-list">
+                            <li class="deadline-item deadline-urgent">
+                                <span class="deadline-label">Register by</span>
+                                <strong>Jul 31, 2026</strong>
+                                <span>Last day for school registrations</span>
+                            </li>
+                            <li class="deadline-item">
+                                <span class="deadline-label">Submit by</span>
+                                <strong>Aug 6, 2026</strong>
+                                <span>6:00 PM IST · InnovateX & Through the Lens</span>
+                            </li>
+                            <li class="deadline-item">
+                                <span class="deadline-label">Results on</span>
+                                <strong>Aug 10, 2026</strong>
+                                <span>2:00 PM IST · Shortlist announced</span>
+                            </li>
+                            <li class="deadline-item deadline-finale">
+                                <span class="deadline-label">Finale</span>
+                                <strong>Aug 18, 2026</strong>
+                                <span>DPS International School, Gurugram</span>
+                            </li>
+                        </ul>
+                        <a class="deadline-link" href="#timeline">View full schedule</a>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Contact coordinators</h3>
+                        <p class="contact-note">For registration help, event rules, or school queries:</p>
+                        <ul class="contact-list">
+                            <li>
+                                <a href="mailto:shipra.kalra@dpsiedge.edu.in"
+                                    ><i class="fa-solid fa-envelope" aria-hidden="true"></i> shipra.kalra@dpsiedge.edu.in</a
+                                >
+                            </li>
+                            <li>
+                                <a href="mailto:manu.kaundal@dpsiedge.edu.in"
+                                    ><i class="fa-solid fa-envelope" aria-hidden="true"></i> manu.kaundal@dpsiedge.edu.in</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logos">
+                            <img
+                                class="footer-school-logo"
+                                src="assets/dpsi-logo.svg"
+                                alt="DPS International School Gurugram"
+                            />
+                            <img
+                                class="footer-ib-logo"
+                                src="assets/ib-continuum.png"
+                                alt="IB World School and IB Continuum"
+                            />
+                            <img
+                                class="footer-cis-logo"
+                                src="assets/cis-accredited.png"
+                                alt="CIS Internationally Accredited School"
+                            />
+                        </div>
+                        <div class="footer-brand-details">
+                            <p class="footer-school-name">DPS International School, Gurugram</p>
+                            <address class="footer-address">
+                                DPS International, HS 01, Block W, South City II, Gurgaon, Haryana- 122001
+                            </address>
+                            <a
+                                class="footer-website"
+                                href="https://www.dpsiedge.edu.in"
+                                target="_blank"
+                                rel="noreferrer"
+                                ><i class="fa-solid fa-globe" aria-hidden="true"></i> Visit DPS International Edge</a
+                            >
+                        </div>
+                    </div>
+                    <nav class="footer-nav" aria-label="Footer navigation">
+                        <a href="#about">About</a>
+                        <a href="#events">Events</a>
+                        <a href="#glimpse">Glimpse</a>
+                        <a href="#timeline">Timeline</a>
+                        <a href="https://forms.gle/S8nZDLmEuoSoqiTy7" target="_blank" rel="noreferrer">Register</a>
+                    </nav>
+                </div>
+                <p class="footer-punchline" aria-label="Our approach">
+                    <span>Investigate</span><i aria-hidden="true">→</i><span>Design</span><i aria-hidden="true">→</i
+                    ><span>Create</span><i aria-hidden="true">→</i><span>Reflect</span>
+                </p>
+                <p class="copyright">© 2026 DPS International School, Gurugram. Techathlon 2026.</p>
+            </div>
+        </footer>
+
+        <dialog class="event-modal" id="event-modal" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close event brief">×</button>
+            <div class="modal-inner">
+                <header class="modal-hero">
+                    <div class="modal-hero-row">
+                        <span class="modal-mode" id="modal-mode"></span>
+                        <span class="modal-event-no" id="modal-event-no" aria-hidden="true"></span>
+                    </div>
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-hook" id="modal-hook"></p>
+                    <div class="modal-meta-chips" id="modal-meta-chips" aria-label="Key details"></div>
+                </header>
+                <div class="modal-sections" id="modal-chapters"></div>
+                <footer class="modal-quickrules" id="modal-quickrules" hidden>
+                    <h3>Quick Rules</h3>
+                    <ul id="modal-rules"></ul>
+                </footer>
+            </div>
+        </dialog>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
