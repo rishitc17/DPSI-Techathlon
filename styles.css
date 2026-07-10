@@ -1494,71 +1494,6 @@ h2 {
     filter: blur(8px);
 }
 
-.timeline-copy-phase {
-    margin: 1.35rem 0 0;
-    color: var(--ember);
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transition:
-        opacity 320ms ease,
-        transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
-        filter 320ms ease;
-}
-
-.timeline-copy-phase.switching {
-    opacity: 0;
-    filter: blur(6px);
-    transform: translateY(12px);
-}
-
-.timeline-rail {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.55rem;
-    margin-top: 1.5rem;
-}
-
-.timeline-rail div {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.45rem;
-}
-
-.timeline-rail span {
-    color: oklch(0.96 0.02 230 / 30%);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    transition: color 300ms ease;
-}
-
-.timeline-rail b {
-    display: block;
-    height: 2px;
-    background: var(--line);
-    overflow: hidden;
-}
-
-.timeline-rail b::after {
-    content: '';
-    display: block;
-    width: var(--rail-progress, 0%);
-    height: 100%;
-    background: linear-gradient(90deg, var(--ember), var(--rust));
-    box-shadow: 0 0 14px var(--ember);
-    transition: width 220ms linear;
-}
-
-.timeline-rail div:has(.active) span,
-.timeline-rail div:has(.complete) span {
-    color: var(--ember);
-}
-
 .timeline-list {
     grid-column: 3;
     position: relative;
@@ -1686,7 +1621,9 @@ h2 {
         0 0 0 0.35rem var(--card),
         0 0 18px var(--ember);
     transform: scale(1.15);
-    transition: transform 220ms ease, box-shadow 220ms ease;
+    transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
 }
 
 .timeline-list li.is-active .timeline-step,
@@ -1911,7 +1848,9 @@ h2 {
     font-size: 1.25rem;
     line-height: 1;
     cursor: pointer;
-    transition: color 180ms ease, background 180ms ease;
+    transition:
+        color 180ms ease,
+        background 180ms ease;
 }
 
 .modal-close:hover {
@@ -1931,11 +1870,7 @@ h2 {
     padding: clamp(1.4rem, 4vw, 2rem) clamp(1.25rem, 4vw, 1.75rem) 1.5rem;
     border-bottom: 1px solid oklch(0.96 0.02 230 / 10%);
     border-left: 3px solid var(--modal-accent);
-    background: linear-gradient(
-        180deg,
-        color-mix(in oklch, var(--modal-accent) 6%, transparent),
-        transparent 70%
-    );
+    background: linear-gradient(180deg, color-mix(in oklch, var(--modal-accent) 6%, transparent), transparent 70%);
 }
 
 .modal-hero-row {

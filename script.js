@@ -743,11 +743,8 @@ function getTimelineCache() {
         list,
         copy,
         milestones: [...list.querySelectorAll('.timeline-milestone')],
-        rails: [...document.querySelectorAll('.timeline-rail b')],
         number: document.getElementById('timeline-copy-number'),
-        phase: document.getElementById('timeline-copy-phase'),
         lastIndex: section ? Number(section.dataset.timelineIndex) : -1,
-        lastCopyY: null,
         lastNumberX: null,
     };
     return scrollState.timeline;
@@ -1352,7 +1349,7 @@ function updateTimelineProgress() {
     const cache = getTimelineCache();
     if (!cache) return;
 
-    const { section, list, copy, milestones, rails, number, phase } = cache;
+    const { section, list, copy, milestones, number } = cache;
     if (!milestones.length) return;
 
     const viewport = window.innerHeight;
@@ -1385,23 +1382,12 @@ function updateTimelineProgress() {
             item.classList.toggle('is-active', index === activeIndex);
             item.classList.toggle('is-complete', index < activeIndex);
         });
-        rails.forEach((bar, index) => {
-            bar.classList.toggle('complete', index < activeIndex);
-            bar.classList.toggle('active', index === activeIndex);
-            bar.style.setProperty(
-                '--rail-progress',
-                index < activeIndex ? '100%' : index === activeIndex ? `${Math.max(8, progress * 100)}%` : '0%',
-            );
-        });
         if (section) section.dataset.timelineIndex = String(activeIndex);
-        const current = timelinePhases[activeIndex];
         if (number) number.classList.add('switching');
-        if (phase) phase.classList.add('switching');
         window.setTimeout(() => {
+            const current = timelinePhases[activeIndex];
             if (number) number.textContent = current.no;
-            if (phase) phase.textContent = current.phase;
             if (number) number.classList.remove('switching');
-            if (phase) phase.classList.remove('switching');
         }, 160);
     }
 
@@ -1410,11 +1396,6 @@ function updateTimelineProgress() {
     if (numberX !== cache.lastNumberX) {
         cache.lastNumberX = numberX;
         copy.style.setProperty('--timeline-number-x', `${numberX}px`);
-    }
-
-    const activeBar = rails[activeIndex];
-    if (activeBar) {
-        activeBar.style.setProperty('--rail-progress', `${Math.max(8, progress * 100)}%`);
     }
 }
 
