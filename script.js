@@ -973,7 +973,7 @@ c) Submission Requirements
 | **Submissions** | **Digital Campaign Poster (PDF/JPEG/PNG) and MP4 video** |
 | **File Size** | **Both files should be under 100 MB** |
 | **Submission Mode** | **[Online Submission Link](https://forms.gle/e1m3BiYGebj7fLx77)** |
-| **Naming Convention** | **SchoolName\_ThroughTheLens\_2026** |
+| **Naming Convention** | **SchoolName\_DigitalPoster\_2026** |
 | **Submission Deadline** | **Monday, August 6, 2026, 6:00 PM IST** |
 
 ### Required Files
