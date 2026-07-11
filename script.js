@@ -472,7 +472,6 @@ const events = [
                 type: 'finale',
                 cards: [
                     { icon: 'fa-calendar', label: 'Date', value: 'Tue, Aug 18, 2026' },
-                    { icon: 'fa-location-dot', label: 'Venue', value: 'DPSI, Gurugram' },
                     { icon: 'fa-stopwatch', label: 'Pitch', value: '5 minutes' },
                     { icon: 'fa-comments', label: 'Q&A', value: '3 minutes' },
                 ],
@@ -528,7 +527,6 @@ const events = [
         meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', '3 min perform + 2 min Q&A'],
         details: [
             ['Category', 'Design & Engineering Challenge'],
-            ['Venue', 'Design and Technology Lab, 4th Floor'],
             ['Build Time', '2 hours'],
             ['Deliverables', '1-2 min talk · 1 min performance · 2 min Q&A'],
         ],
@@ -677,8 +675,6 @@ const modalEventSource = String.raw`
 
 ### ***Design the Future. Create Meaningful Impact.***
 
-Venue: Project Room, Secondary Building (4th floor)
-
 **1\. EVENT OVERVIEW**
 
 | Event Name | InnovateX Challenge |
@@ -772,8 +768,6 @@ Shortlisted teams from outstation schools may present virtually via Microsoft Te
 
 ### **Date:** Tuesday, August 18, 2026
 
-### **Venue:** DPS International School, Gurugram
-
 ### **Presentation Time:** 6 minutes
 
 ### **Q\&A:** 4 minutes
@@ -796,7 +790,7 @@ Shortlisted teams from outstation schools may present virtually via Microsoft Te
 ### **2\. AI for Good Lab**
 
  ***Think Fast. Build Smart. Create Impact.***
-**Venue:**
+
 **1\. Event Overview**
 
 | Event Name | AI for Good Lab |
@@ -1010,7 +1004,6 @@ c) Submission Requirements
 **4\. Grand Finale Guidelines**
 
 * **Date:** Tuesday, August 18, 2026
-* **Venue:** DPS International School, Gurugram
 * **Presentation Time:** 5 minutes
 * **Q\&A:** 3 minutes
 * **Presentation Format:** PPT/PDF
@@ -1055,7 +1048,6 @@ Participants may use any digital design software, including:
 
 ***Design. Build. Play.***
 
-**Venue: Design and Technology Lab, 4th Floor**
 **1\. Event Overview**
 
 | Event Name | SoundCraft Challenge |
@@ -1152,7 +1144,6 @@ const modalEvents = [
             ['Category', 'Technology Innovation'],
             ['Submission', 'Aug 6, 2026, 6 PM'],
             ['Finale', 'Aug 18, 2026'],
-            ['Venue', 'Project Room, Secondary Building'],
         ],
         rules: [
             'Teams must identify a real-world challenge aligned with the theme.',
@@ -1173,7 +1164,6 @@ const modalEvents = [
                     ],
                     ['Number of Entries', 'One team per school'],
                     ['Team Size', '2-4 participants from Grades IX-XII'],
-                    ['Venue', 'Project Room, Secondary Building, 4th floor'],
                 ],
             },
             {
@@ -1247,7 +1237,6 @@ const modalEvents = [
                 title: 'Grand Finale',
                 rows: [
                     ['Date', 'Tuesday, August 18, 2026'],
-                    ['Venue', 'DPS International School, Gurugram'],
                     ['Presentation', '6 minutes'],
                     ['Q&A', '4 minutes'],
                     ['Format', 'PPT or PDF with prototype demonstration'],
@@ -1517,7 +1506,6 @@ const modalEvents = [
                 title: 'Grand Finale',
                 rows: [
                     ['Date', 'Tuesday, August 18, 2026'],
-                    ['Venue', 'DPS International School, Gurugram'],
                     ['Presentation', '5 minutes'],
                     ['Q&A', '3 minutes'],
                     ['Format', 'PPT or PDF'],
@@ -1582,7 +1570,6 @@ const modalEvents = [
         meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', 'Live performance'],
         details: [
             ['Category', 'Design & Engineering'],
-            ['Venue', 'Design and Technology Lab'],
             ['Build Time', '2 hours'],
             ['Finale', '3 minute performance + 2 Q&A'],
         ],
@@ -1602,7 +1589,6 @@ const modalEvents = [
                     ['Mode', 'Live challenge, on-site'],
                     ['Number of Entries', 'One team per school'],
                     ['Team Size', '2-3 participants from Grades IX-XII'],
-                    ['Venue', 'Design and Technology Lab, 4th floor'],
                 ],
             },
             {

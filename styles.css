@@ -2664,6 +2664,11 @@ h2 {
 }
 
 @media (max-width: 760px) {
+    .timeline-copy {
+        position: relative;
+        top: auto;
+    }
+
     .desktop-nav {
         display: none;
     }
