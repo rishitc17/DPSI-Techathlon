@@ -982,15 +982,16 @@ c) Submission Requirements
 
 ### **Presentation Specifications \-**
 
-Participants must submit a 2 minute video in MP4 format that includes the following details:
+**Participants must submit a 2-minute video in MP4 format explaining their campaign poster.**
 
-| Introduction: Participant Name, School Name, Campaign Title, Selected Theme |
-| :---- |
-| The Issue: Brief overview of the issue, its significance, affected audience, and supporting facts or statistics |
-| **Target Audience:** Intended audience, desired behavioural change or action, and its significance |
-| **Campaign Visual:** Final campaign poster or digital visual (may include photography, digital illustration, graphic design, typography, photo manipulation, or mixed media) |
-| **Design Rationale:** Creative concept, key design decisions (colour, typography, composition), and how the design communicates the intended message |
-| **Credits & References:** Image credits, references, AI tools used (if any), and software/platforms used |
+**The video should include:**
+
+* **Introduction: Participant Name, School Name, Campaign Title, and Selected Theme.**
+* **The Issue: A brief explanation of the issue being addressed and why it is important.**
+* **Target Audience: Who the campaign is intended for and the positive change it aims to inspire.**
+* **Campaign Visual: A showcase of the final campaign poster or digital visual.**
+* **Design Rationale: An explanation of the creative concept, key design choices, and how the visual effectively communicates the intended message.**
+* **Credits: Acknowledgement of image sources, references, AI tools (if used), and software/platforms used.**
 
 **3\. Judging Criteria**
 
@@ -1494,12 +1495,12 @@ const modalEvents = [
             {
                 title: 'Video Must Cover',
                 items: [
-                    'Introduction: participant name, school name, campaign title, and selected theme',
-                    'The issue: overview, significance, audience, and facts',
-                    'Target audience: audience, desired change or action, and significance',
-                    'Campaign visual: final poster or visual using photography, digital illustration, graphic design, typography, photo manipulation, or mixed media',
-                    'Design rationale: concept, colour, type, composition, and communication',
-                    'Credits and references: image credits, references, AI tools, and software',
+                    'Introduction: Participant Name, School Name, Campaign Title, and Selected Theme.',
+                    'The Issue: A brief explanation of the issue being addressed and why it is important.',
+                    'Target Audience: Who the campaign is intended for and the positive change it aims to inspire.',
+                    'Campaign Visual: A showcase of the final campaign poster or digital visual.',
+                    'Design Rationale: An explanation of the creative concept, key design choices, and how the visual effectively communicates the intended message.',
+                    'Credits: Acknowledgement of image sources, references, AI tools (if used), and software/platforms used.',
                 ],
             },
             {
