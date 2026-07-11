@@ -2088,13 +2088,14 @@ function getPlainModalText(value) {
 }
 
 function isModalSectionHeading(value) {
-    const text = getPlainModalText(value)
+    const text = getPlainModalText(value).replace(/^\s*#+\s*/, '').trim();
+    const textWithoutNumber = text
         .replace(/^\s*#+\s*/, '')
         .replace(/^\s*\d+\\?\.\s*/, (match) => match.replace('\\', ''))
         .trim();
-    const lower = text.toLowerCase();
+    const lower = textWithoutNumber.toLowerCase();
     return (
-        /^\d+\.\s+\S/.test(text) ||
+        /^\d+\\?\.\s+\S/.test(text) ||
         /^[a-z]\)\s+\S/i.test(text) ||
         /^[a-z]\.\s+\S/i.test(text) ||
         /^(preliminary round|final round|sample challenge statements|required files|presentation specifications|ai development platforms|design tools|competition guidelines)$/i.test(lower)
@@ -2104,7 +2105,12 @@ function isModalSectionHeading(value) {
 function renderModalHeading(value, level = 4) {
     const plain = getPlainModalText(value);
     const tag = level === 3 ? 'h3' : 'h4';
-    return `<${tag}>${escapeModalHtml(plain)}</${tag}>`;
+    const className = level === 3 ? 'brief-heading' : 'brief-subheading';
+    return `<${tag} class="${className}">${escapeModalHtml(plain)}</${tag}>`;
+}
+
+function getModalHeadingLevel(value) {
+    return /^\s*(?:#+\s*)?(?:\*\*)?\d+\\?\.\s+\S/.test(value.trim()) ? 3 : 4;
 }
 
 function renderModalMarkdown(source, event) {
@@ -2138,7 +2144,12 @@ function renderModalMarkdown(source, event) {
                 .filter((row) => normalizeModalText(row[0] || '') !== 'event name')
                 .filter((row) => row.some((cell) => normalizeModalText(cell)));
             const tableHead = header ? `<thead><tr>${header.map((cell) => `<th>${renderModalInline(cell)}</th>`).join('')}</tr></thead>` : '';
-            output.push(`<div class="modal-markdown-table"><table>${tableHead}<tbody>${body.map((row) => `<tr>${row.map((cell) => `<td>${renderModalInline(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+            const tableClass = header
+                ? 'modal-markdown-table brief-score-table'
+                : body.every((row) => row.length === 1)
+                  ? 'modal-markdown-table brief-list-table'
+                  : 'modal-markdown-table brief-key-table';
+            output.push(`<div class="${tableClass}"><table>${tableHead}<tbody>${body.map((row) => `<tr>${row.map((cell, cellIndex) => `<td${!header && cellIndex === 0 ? ' class="brief-table-label"' : ''}>${renderModalInline(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
             hasContent = true;
             continue;
         }
@@ -2147,7 +2158,7 @@ function renderModalMarkdown(source, event) {
         if (heading) {
             const headingText = heading[1].trim();
             if (/^(\*\*)?.+?:/.test(headingText)) {
-                output.push(`<div class="modal-fact-lines"><p>${renderModalInline(headingText)}</p></div>`);
+                output.push(`<div class="modal-fact-lines brief-facts"><p>${renderModalInline(headingText)}</p></div>`);
             } else if (isModalSectionHeading(headingText)) {
                 output.push(renderModalHeading(headingText, 3));
             } else {
@@ -2162,7 +2173,7 @@ function renderModalMarkdown(source, event) {
         if (standaloneHeading) {
             output.push(
                 isModalSectionHeading(standaloneHeading[1])
-                    ? renderModalHeading(standaloneHeading[1], 4)
+                    ? renderModalHeading(standaloneHeading[1], getModalHeadingLevel(standaloneHeading[1]))
                     : `<p class="modal-emphasis">${renderModalInline(line.trim())}</p>`,
             );
             hasContent = true;
@@ -2171,7 +2182,7 @@ function renderModalMarkdown(source, event) {
         }
 
         if (isModalSectionHeading(line)) {
-            output.push(renderModalHeading(line, 4));
+            output.push(renderModalHeading(line, getModalHeadingLevel(line)));
             hasContent = true;
             index += 1;
             continue;
@@ -2207,7 +2218,7 @@ function renderModalMarkdown(source, event) {
         if (paragraph.length) {
             const factLines = paragraph.every((item) => /^(\*\*)?.+?:/.test(item));
             const rendered = paragraph.map((item) => renderModalInline(item)).join(factLines ? '' : '<br>');
-            output.push(factLines ? `<div class="modal-fact-lines">${paragraph.map((item) => `<p>${renderModalInline(item)}</p>`).join('')}</div>` : `<p>${rendered}</p>`);
+            output.push(factLines ? `<div class="modal-fact-lines brief-facts">${paragraph.map((item) => `<p>${renderModalInline(item)}</p>`).join('')}</div>` : `<p>${rendered}</p>`);
             hasContent = true;
         }
     }
