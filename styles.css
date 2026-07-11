@@ -855,7 +855,7 @@ h2 {
 
 .philosophy-stage > .section-kicker {
     position: absolute;
-    top: clamp(2rem, 6vw, 4rem);
+    top: clamp(3.1rem, 7vw, 5rem);
     left: clamp(1rem, 4vw, 2.5rem);
     z-index: 1;
 }
@@ -1105,11 +1105,34 @@ h2 {
 }
 
 .event-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .event-group-header .section-kicker {
     margin: 0;
+}
+
+.event-group-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: oklch(0.96 0.02 230 / 78%);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.event-group-link i {
+    color: var(--ember);
+    font-size: 0.78rem;
+}
+
+.event-group-link:hover {
+    color: var(--ember);
 }
 
 .event-group--hybrid {
@@ -2107,6 +2130,37 @@ h2 {
 
 .event-brief-modal .modal-sections {
     margin-top: 0;
+}
+
+.event-brief-modal .modal-submission-callout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1rem;
+    margin: 0 0 1.35rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid oklch(0.75 0.15 225 / 34%);
+    border-radius: 6px;
+    background: oklch(0.22 0.045 264 / 72%);
+}
+
+.event-brief-modal .modal-submission-callout span {
+    color: oklch(0.96 0.02 230 / 64%);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.event-brief-modal .modal-submission-callout a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--ember);
+    font-size: 0.94rem;
+    font-weight: 800;
 }
 
 .event-brief-modal .modal-source {

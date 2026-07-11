@@ -1907,6 +1907,8 @@ const EVENT_GROUPS = [
     { mode: 'On-site', label: 'On-site', modifier: 'onsite' },
 ];
 
+const HYBRID_SUBMISSION_URL = 'https://forms.gle/e1m3BiYGebj7fLx77';
+
 function renderEventCard(event) {
     return `
     <article class="event-card tilt reveal" tabindex="0" role="button" aria-label="Open ${event.name} brief" data-event="${event.no}">
@@ -1941,6 +1943,11 @@ function renderEvents() {
     <section class="event-group event-group--${group.modifier} reveal">
       <header class="event-group-header">
         <p class="section-kicker">${group.label}</p>
+        ${
+            group.mode === 'Hybrid'
+                ? `<a class="event-group-link" href="${HYBRID_SUBMISSION_URL}" target="_blank" rel="noreferrer"><i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i> Submit hybrid entry</a>`
+                : ''
+        }
       </header>
       <div class="event-grid">
         ${groupEvents.map((event) => renderEventCard(event)).join('')}
@@ -2254,7 +2261,11 @@ function openModal(event) {
     document.getElementById('modal-long').hidden = true;
     document.getElementById('modal-details').hidden = true;
     document.getElementById('modal-rules').hidden = true;
-    document.getElementById('modal-sections').innerHTML = renderModalMarkdown(source, event);
+    const hybridSubmission =
+        event.mode === 'Hybrid'
+            ? `<aside class="modal-submission-callout"><span>Hybrid submission</span><a href="${HYBRID_SUBMISSION_URL}" target="_blank" rel="noreferrer">Submit entry <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i></a></aside>`
+            : '';
+    document.getElementById('modal-sections').innerHTML = `${hybridSubmission}${renderModalMarkdown(source, event)}`;
     const modalBody = dialog.querySelector('.modal-body');
     modalBody.scrollTop = 0;
     renderGlyphs();
