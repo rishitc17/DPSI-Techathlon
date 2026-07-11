@@ -149,10 +149,10 @@ const events = [
         ],
     },
     {
-        no: '02',
+        no: '03',
         name: 'AI for Good Lab',
         tag: 'Think Fast. Build Smart. Create Impact.',
-        mode: 'Hybrid',
+        mode: 'On-site',
         desc: 'Harness the power of AI to rapidly create a functional digital solution for a real-world challenge.',
         long: 'Fast-paced live challenge — receive a theme-aligned statement, build a functional MVP with AI-assisted tools in 2 hours, then demo to judges.',
         meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', '5 min demo + 3 min Q&A'],
@@ -335,10 +335,10 @@ const events = [
         ],
     },
     {
-        no: '03',
+        no: '02',
         name: 'Through the Lens',
         tag: 'Every Picture Inspires Change.',
-        mode: 'On-site',
+        mode: 'Hybrid',
         desc: 'Create an original campaign poster or visual using curated challenge images released on the website.',
         long: 'Visual storytelling challenge — transform curated photographs into a campaign that informs, inspires, and motivates audiences toward an impactful future.',
         meta: ['1-2 participants', 'Grades IX-XII', 'Poster + 2 min video', 'No AI artwork'],
@@ -1271,7 +1271,7 @@ const modalEvents = [
         ],
     },
     {
-        no: '02',
+        no: '03',
         name: 'AI for Good Lab',
         tag: 'Think Fast. Build Smart. Create Impact.',
         mode: 'On-site',
@@ -1421,7 +1421,7 @@ const modalEvents = [
         ],
     },
     {
-        no: '03',
+        no: '02',
         name: 'Through the Lens',
         tag: 'Every Picture Inspires Change.',
         mode: 'Hybrid',
@@ -2230,8 +2230,8 @@ function renderModalMarkdown(source, event) {
 function getModalSource(eventNumber) {
     const markers = {
         '01': ['### **INNOVATEX CHALLENGE**', '### **2\\. AI for Good Lab**'],
-        '02': ['### **2\\. AI for Good Lab**', '# **Through the Lens**'],
-        '03': ['# **Through the Lens**', '### **4\\. SoundCraft Challenge**'],
+        '02': ['# **Through the Lens**', '### **4\\. SoundCraft Challenge**'],
+        '03': ['### **2\\. AI for Good Lab**', '# **Through the Lens**'],
         '04': ['### **4\\. SoundCraft Challenge**'],
     };
     const [startMarker, endMarker] = markers[eventNumber];
