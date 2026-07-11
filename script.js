@@ -672,6 +672,550 @@ const events = [
     },
 ];
 
+const modalEvents = [
+    {
+        no: '01',
+        name: 'InnovateX Challenge',
+        tag: 'Design the Future. Create Meaningful Impact.',
+        mode: 'Hybrid',
+        desc: 'Identify an authentic real-world problem and propose a technology-enabled solution that creates meaningful impact.',
+        long: 'InnovateX is a two-round technology innovation challenge. Teams submit an 8-slide PPTX or PDF in the preliminary round, then shortlisted teams present at DPS International School, Gurugram, with Microsoft Teams available for shortlisted outstation schools. Solutions may be apps, web platforms, AI-enabled ideas, IoT prototypes, physical products, or robotics concepts.',
+        meta: ['2-4 participants', 'Grades IX-XII', 'One team per school', 'PPTX or PDF'],
+        details: [
+            ['Category', 'Technology Innovation'],
+            ['Submission', 'Aug 6, 2026, 6 PM'],
+            ['Finale', 'Aug 18, 2026'],
+            ['Venue', 'Project Room, Secondary Building'],
+        ],
+        rules: [
+            'Teams must identify a real-world challenge aligned with the theme.',
+            'Preliminary presentation: maximum 8 slides, PPTX or PDF, maximum 20 MB.',
+            'Use the naming convention SchoolName_InnovateX_2026.',
+            'Finale presentation is 6 minutes, followed by 4 minutes of Q&A.',
+            'AI tools may be used responsibly and must be acknowledged on the credits slide.',
+        ],
+        sections: [
+            {
+                title: 'Event Overview',
+                rows: [
+                    ['Event Name', 'InnovateX Challenge'],
+                    ['Category', 'Technology Innovation Challenge'],
+                    [
+                        'Mode',
+                        'Two rounds: online preliminary submission and grand finale presentation at the host school or on Microsoft Teams for shortlisted outstation schools',
+                    ],
+                    ['Number of Entries', 'One team per school'],
+                    ['Team Size', '2-4 participants from Grades IX-XII'],
+                    ['Venue', 'Project Room, Secondary Building, 4th floor'],
+                ],
+            },
+            {
+                title: 'Challenge',
+                body: [
+                    'Inspired by the theme Imagining an Impactful Future, teams identify an authentic real-world problem and propose an innovative technology-enabled solution that creates meaningful impact.',
+                    'Solutions should demonstrate creativity, inquiry, empathy, feasibility, responsible technology use, and a clear understanding of the users or communities being served.',
+                ],
+            },
+            {
+                title: 'Suggested Challenge Areas',
+                items: [
+                    'Health & Well-being',
+                    'Inclusive Education',
+                    'Environmental Sustainability',
+                    'Smart Communities',
+                    'Digital Citizenship',
+                    'Accessibility',
+                    'Community Development',
+                    'Responsible AI',
+                    'Disaster Management',
+                    'Future of Learning',
+                ],
+            },
+            {
+                title: 'Possible Solution Forms',
+                items: [
+                    'Mobile application',
+                    'Website or web platform',
+                    'AI-enabled solution',
+                    'IoT prototype',
+                    'Physical product prototype',
+                    'Robotics concept',
+                ],
+            },
+            {
+                title: 'Preliminary Submission',
+                rows: [
+                    ['Submission', 'One presentation in PDF or PPTX format'],
+                    ['Maximum Slides', '8 slides'],
+                    ['Maximum File Size', '20 MB'],
+                    ['Mode', 'Online submission link'],
+                    ['File Naming', 'SchoolName_InnovateX_2026'],
+                    ['Deadline', 'Monday, August 6, 2026, 6:00 PM IST'],
+                ],
+            },
+            {
+                title: 'Presentation Order',
+                items: [
+                    'Team introduction: school name, team members, and challenge title',
+                    'Problem statement',
+                    'Target users',
+                    'Proposed solution',
+                    'Prototype or concept: prototype, wireframe, product design, app screens, website mock-up, working model, or system workflow',
+                    'Impact and feasibility',
+                    'Future scope',
+                    'Credits and references',
+                ],
+            },
+            {
+                title: 'Preliminary Judging',
+                rows: [
+                    ['Problem Identification & User Understanding', '20'],
+                    ['Innovation & Technology Integration', '20'],
+                    ['Feasibility & Prototype', '20'],
+                    ['Impact & Value Proposition', '20'],
+                    ['Presentation & Communication', '20'],
+                ],
+            },
+            {
+                title: 'Grand Finale',
+                rows: [
+                    ['Date', 'Tuesday, August 18, 2026'],
+                    ['Venue', 'DPS International School, Gurugram'],
+                    ['Presentation', '6 minutes'],
+                    ['Q&A', '4 minutes'],
+                    ['Format', 'PPT or PDF with optional prototype demonstration'],
+                    ['Outstation Schools', 'Shortlisted teams may present via Microsoft Teams'],
+                ],
+            },
+            {
+                title: 'Final Judging',
+                rows: [
+                    ['Problem Understanding & User-Centred Thinking', '20'],
+                    ['Innovation & Technology Integration', '20'],
+                    ['Working Prototype / Demonstration', '20'],
+                    ['Impact & Feasibility', '20'],
+                    ['Presentation & Communication', '20'],
+                    ['Q&A', '10'],
+                ],
+            },
+            {
+                title: 'General Guidelines',
+                items: [
+                    'Only one team may participate from each school.',
+                    'All work must be original.',
+                    'AI tools may be used responsibly and must be acknowledged on the credits slide.',
+                    'External resources, datasets, images, and software must be credited.',
+                    'Solutions must demonstrate responsible and ethical technology use.',
+                    'Teams should bring laptops for the finale. Wi-Fi will be provided.',
+                    "The judges' decision will be final.",
+                ],
+            },
+        ],
+    },
+    {
+        no: '02',
+        name: 'AI for Good Lab',
+        tag: 'Think Fast. Build Smart. Create Impact.',
+        mode: 'On-site',
+        desc: 'A live AI innovation sprint where teams build a digital product for a challenge revealed on the day.',
+        long: 'AI for Good Lab is a fast-paced live challenge. Teams receive a challenge statement aligned with Imagining an Impactful Future, investigate the problem, brainstorm ideas, build a functional MVP using AI-assisted development tools, submit their product and one-page presentation, then demonstrate their work to judges.',
+        meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', 'MVP demo'],
+        details: [
+            ['Category', 'AI Innovation Sprint'],
+            ['Development', '2 hours'],
+            ['Presentation', '5 minutes'],
+            ['Q&A', '3 minutes'],
+        ],
+        rules: [
+            'The challenge statement is revealed only at the start of the competition.',
+            'Teams must develop their solution during the competition.',
+            'Teams may build a web app, mobile app, AI chatbot, dashboard, interactive website, workflow tool, or similar MVP.',
+            'AI-assisted development is encouraged, but all tools must be disclosed.',
+            'Participants must bring their own laptops and chargers.',
+        ],
+        sections: [
+            {
+                title: 'Event Overview',
+                rows: [
+                    ['Event Name', 'AI for Good Lab'],
+                    ['Category', 'AI Innovation Sprint'],
+                    ['Mode', 'Live challenge, on-site'],
+                    ['Number of Entries', 'One team per school'],
+                    ['Team Size', '2-3 participants from Grades IX-XII'],
+                ],
+            },
+            {
+                title: 'Challenge Format',
+                body: [
+                    'Teams use AI to design and develop a digital product that responds to a real-world problem. The challenge is revealed at the beginning of the event.',
+                    'Participants investigate the issue, generate ideas, build a functional digital solution using AI-assisted development tools, and present the product to judges.',
+                    'The event emphasizes creativity, collaboration, responsible AI use, and rapid problem-solving.',
+                ],
+            },
+            {
+                title: 'Sample Challenge Statements',
+                items: [
+                    'Help senior citizens stay socially connected.',
+                    "Create an AI assistant for students' emotional wellbeing and stress support.",
+                    'Design an AI volunteer or community service platform.',
+                    'Build a resource-sharing, waste-reduction, or community-support platform.',
+                ],
+            },
+            {
+                title: 'Event Format',
+                rows: [
+                    ['Challenge Release', 'At the start of the competition'],
+                    ['Development Time', '2 hours'],
+                    ['Submission', 'Digital product and one-page presentation through the portal'],
+                    ['Team Presentation', '5 minutes'],
+                    ["Judges' Q&A", '3 minutes'],
+                ],
+            },
+            {
+                title: 'MVP Possibilities',
+                items: [
+                    '2-3 page web app',
+                    '2-3 screen mobile app',
+                    'AI chatbot or virtual assistant',
+                    'AI dashboard',
+                    'Interactive website',
+                    'Workflow automation',
+                    'Educational learning tool',
+                    'Community engagement platform',
+                    'Productivity app',
+                ],
+            },
+            {
+                title: 'Permitted AI Tools',
+                groups: [
+                    ['AI Assistants', ['ChatGPT', 'Microsoft Copilot', 'Claude', 'Gemini']],
+                    [
+                        'AI Development Platforms',
+                        ['Bolt.new', 'Lovable', 'Firebase Studio', 'Cursor', 'Windsurf', 'Replit AI', 'Vercel v0'],
+                    ],
+                    ['Design Tools', ['Figma AI', 'Canva AI']],
+                    ['Other Tools', ['Other public AI tools may be used if they comply with the event rules.']],
+                ],
+            },
+            {
+                title: 'Judging Criteria',
+                rows: [
+                    ['Understanding of Challenge', '15'],
+                    ['Innovation & Creativity', '20'],
+                    ['Effective Use of AI', '20'],
+                    ['Product Functionality & UX', '20'],
+                    ['Potential Impact', '15'],
+                    ['Presentation & Communication', '10'],
+                ],
+            },
+            {
+                title: 'Presentation Requirements',
+                items: [
+                    'Explain the challenge.',
+                    'Present the proposed solution.',
+                    'Disclose the AI tools used.',
+                    'Demonstrate the live product.',
+                    'Explain the expected impact.',
+                ],
+            },
+            {
+                title: 'Competition Rules',
+                groups: [
+                    [
+                        'General',
+                        [
+                            'One team may participate from each school.',
+                            'The challenge will be revealed only at the start.',
+                            'The solution must be developed entirely during the competition.',
+                            'Internet will be provided.',
+                            'Participants must bring laptops and chargers.',
+                        ],
+                    ],
+                    [
+                        'AI Usage',
+                        [
+                            'AI use is encouraged.',
+                            'All AI tools must be disclosed.',
+                            'Participants must be able to explain AI-generated code or content.',
+                            'Judges may ask technical questions.',
+                        ],
+                    ],
+                    [
+                        'Product Rules',
+                        [
+                            'The product must be developed during the competition.',
+                            'Templates, libraries, and open-source resources are allowed with attribution.',
+                            'Previous projects and pre-built products are not allowed.',
+                            'The product does not need to be complete, but it must demonstrate core functionality.',
+                        ],
+                    ],
+                    [
+                        'Code of Conduct',
+                        [
+                            'Collaboration is permitted only within the team.',
+                            'Academic integrity must be maintained.',
+                            'External assets and datasets must be acknowledged.',
+                            "The judges' decision will be final.",
+                        ],
+                    ],
+                ],
+            },
+        ],
+    },
+    {
+        no: '03',
+        name: 'Through the Lens',
+        tag: 'Every Picture Inspires Change.',
+        mode: 'Hybrid',
+        desc: 'Create an original campaign poster or visual using curated challenge images released on the website.',
+        long: 'Through the Lens is a visual storytelling and digital campaign challenge. Participants use one or more images from a curated set released on Saturday, August 1, 2026, to create a campaign poster or digital visual that raises awareness, communicates a meaningful message, and encourages positive action.',
+        meta: ['1-2 participants', 'Grades IX-XII', 'Poster + video', 'No AI artwork'],
+        details: [
+            ['Image Set', 'Aug 1, 2026'],
+            ['Submission', 'Aug 6, 2026, 6 PM'],
+            ['Finale', 'Aug 18, 2026'],
+            ['Presentation', '5 minutes + 3 Q&A'],
+        ],
+        rules: [
+            'Submit the campaign poster as PDF, JPEG, PNG, or PPTX, maximum 20 MB.',
+            'Submit a 2-minute MP4 video explaining the issue, audience, campaign visual, design rationale, credits, and references.',
+            'AI-generated artwork is not permitted.',
+            'AI may be used only for brainstorming, grammar refinement, or colour palette exploration, and must be acknowledged.',
+            'All artwork and design work must be original, with proper credits for external resources.',
+        ],
+        sections: [
+            {
+                title: 'Event Overview',
+                rows: [
+                    ['Event Name', 'Through the Lens'],
+                    ['Category', 'Visual Storytelling & Digital Campaign Challenge'],
+                    [
+                        'Mode',
+                        'Two rounds: online preliminary submission and grand finale presentation at the host school or on Microsoft Teams for shortlisted outstation schools',
+                    ],
+                    ['Number of Entries', '1-2 participants per school'],
+                    ['Eligibility', 'Grades IX-XII'],
+                ],
+            },
+            {
+                title: 'Challenge',
+                body: [
+                    'Participants use visual storytelling to inspire positive change. On Saturday, August 1, 2026, participants can download a curated image set from the official website.',
+                    'Each set includes 2-3 authentic, high-resolution photographs based on a common challenge theme. Participants use one or more provided images to create an original campaign poster or digital visual that communicates a message, raises awareness, and encourages positive action.',
+                    'The focus is thoughtful communication, creativity, and purposeful design rather than artistic perfection.',
+                ],
+            },
+            {
+                title: 'Suggested Themes',
+                body: ['Image sets will be released on Saturday, August 1, 2026.'],
+                items: [
+                    'Digital Footprints & Online Reputation',
+                    'Responsible Use of Artificial Intelligence',
+                    'Combating Misinformation',
+                    'Cyberbullying & Online Kindness',
+                ],
+            },
+            {
+                title: 'Submission',
+                rows: [
+                    ['Submission Method', 'Official Techathlon Submission Form'],
+                    ['Deadline', 'Thursday, August 6, 2026, 6:00 PM IST'],
+                    ['Campaign Poster', 'PDF, JPEG, PNG, or PPTX'],
+                    ['Maximum File Size', '20 MB'],
+                    ['Video', '2-minute MP4 explanation'],
+                ],
+            },
+            {
+                title: 'Video Must Cover',
+                items: [
+                    'Introduction: participant name, school name, campaign title, and selected theme',
+                    'The issue: overview, significance, audience, and facts',
+                    'Target audience: audience, desired change or action, and significance',
+                    'Campaign visual: final poster or visual using photography, digital illustration, graphic design, typography, photo manipulation, or mixed media',
+                    'Design rationale: concept, colour, type, composition, and communication',
+                    'Credits and references: image credits, references, AI tools, and software',
+                ],
+            },
+            {
+                title: 'Preliminary Judging',
+                rows: [
+                    ['Understanding the Issue', '20'],
+                    ['Creativity & Originality', '20'],
+                    ['Visual Communication', '25'],
+                    ['Technical Design Skills', '20'],
+                    ['Overall Presentation', '15'],
+                ],
+            },
+            {
+                title: 'Grand Finale',
+                rows: [
+                    ['Date', 'Tuesday, August 18, 2026'],
+                    ['Venue', 'DPS International School, Gurugram'],
+                    ['Presentation', '5 minutes'],
+                    ['Q&A', '3 minutes'],
+                    ['Format', 'PPT or PDF'],
+                    ['Outstation Schools', 'Shortlisted teams may present via Microsoft Teams'],
+                ],
+            },
+            {
+                title: 'Final Judging',
+                rows: [
+                    ['Understanding the Issue', '15'],
+                    ['Creativity & Innovation', '20'],
+                    ['Effectiveness of Campaign', '25'],
+                    ['Design Justification', '20'],
+                    ['Presentation and Response to Questions', '20'],
+                ],
+            },
+            {
+                title: 'Guidelines',
+                items: [
+                    'One entry may be submitted per school.',
+                    'All work must be original.',
+                    'Stock images may be used only if they are appropriately licensed and credited.',
+                    'AI-generated artwork is not permitted.',
+                    'AI may be used only for brainstorming, grammar refinement, or colour palette exploration, and must be acknowledged in credits.',
+                    'External resources, fonts, icons, and images must be credited.',
+                    "The judges' decision will be final.",
+                ],
+            },
+            {
+                title: 'Recommended Software',
+                items: [
+                    'Adobe Photoshop',
+                    'Adobe Illustrator',
+                    'Photopea',
+                    'GIMP',
+                    'Canva',
+                    'Figma',
+                    'Affinity Designer',
+                    'Inkscape',
+                    'Krita',
+                ],
+            },
+            {
+                title: 'Timeline',
+                rows: [
+                    ['Registration', 'Friday, July 31, 2026'],
+                    ['Challenge Images', 'Saturday, August 1, 2026'],
+                    ['Online Deadline', 'Thursday, August 6, 2026, 6:00 PM IST'],
+                    ['Shortlisted Results', 'Monday, August 10, 2026, 2:00 PM IST'],
+                    ['Grand Finale', 'Tuesday, August 18, 2026'],
+                ],
+            },
+        ],
+    },
+    {
+        no: '04',
+        name: 'SoundCraft Challenge',
+        tag: 'Design. Build. Play.',
+        mode: 'On-site',
+        desc: 'Transform simple everyday materials into functional musical instruments during a live engineering challenge.',
+        long: 'SoundCraft Challenge asks teams to design and construct one or more functional musical instruments using only the materials provided by the organisers. The challenge rewards creativity, engineering, collaboration, iterative design, and the ability to explain how the instrument produces sound.',
+        meta: ['2-3 participants', 'Grades IX-XII', '2 hour build', 'Live performance'],
+        details: [
+            ['Category', 'Design & Engineering'],
+            ['Venue', 'Design and Technology Lab'],
+            ['Build Time', '2 hours'],
+            ['Finale', '3 minute performance + 2 Q&A'],
+        ],
+        rules: [
+            'Teams must use only the materials provided by the organisers.',
+            'Every instrument must produce an audible sound.',
+            'At least four different materials from the kit must be incorporated into the final design.',
+            'Laptops, tablets, and mobile phones are not required.',
+            'All team members must actively participate in design, construction, and presentation.',
+        ],
+        sections: [
+            {
+                title: 'Event Overview',
+                rows: [
+                    ['Event Name', 'SoundCraft Challenge'],
+                    ['Category', 'Design & Engineering Challenge'],
+                    ['Mode', 'Live challenge, on-site'],
+                    ['Number of Entries', 'One team per school'],
+                    ['Team Size', '2-3 participants from Grades IX-XII'],
+                    ['Venue', 'Design and Technology Lab, 4th floor'],
+                ],
+            },
+            {
+                title: 'Challenge',
+                body: [
+                    'Teams transform simple everyday materials into functional musical instruments that demonstrate creativity, engineering, and design thinking.',
+                    'Using only the provided materials, participants design and build one or more instruments capable of producing original sounds.',
+                    'The event encourages innovation from limited resources through creativity, collaboration, and iterative design. It concludes with a short presentation and musical performance that demonstrate construction, functionality, and the story behind the design.',
+                ],
+            },
+            {
+                title: 'Format',
+                rows: [
+                    ['Briefing', 'Teams receive the challenge and identical material kit'],
+                    ['Build Time', '2 hours to brainstorm, design, build, refine, and test'],
+                    ['Verbal Presentation', '1-2 minutes'],
+                    ['Musical Performance', '1 minute; remix existing music or perform a new composition'],
+                    ["Judges' Q&A", '2 minutes'],
+                ],
+            },
+            {
+                title: 'Material Kit',
+                items: [
+                    'Cardboard sheet',
+                    'Paper cups',
+                    'Rubber bands',
+                    'Ice cream sticks',
+                    'Plastic bottle',
+                    'Drinking straws',
+                    'Cotton string',
+                    'Bottle caps',
+                    'Balloon',
+                    'Masking tape',
+                    'Glue',
+                    'Scissors',
+                ],
+                body: ['No additional materials may be brought or used.'],
+            },
+            {
+                title: 'Competition Guidelines',
+                items: [
+                    'Only one team may participate from each school.',
+                    'Only provided materials may be used.',
+                    'Instruments must be built during the competition.',
+                    'Teams may build one or more instruments.',
+                    'Every instrument must produce audible sound.',
+                    'Teams should experiment, test, and refine their designs.',
+                    'At least four different materials from the kit must be used.',
+                    'All team members must participate.',
+                    'Safety must be maintained throughout the activity.',
+                    'Laptops, tablets, mobile phones, and AI are not required.',
+                    "The judges' decision will be final.",
+                ],
+            },
+            {
+                title: 'Final Presentation',
+                body: ['Teams receive 3 minutes to present and perform, followed by 2 minutes of questions.'],
+                items: [
+                    'Introduce the team and instrument or instruments.',
+                    'Explain the inspiration.',
+                    'Explain how the instrument produces sound.',
+                    'Share key design challenges.',
+                    'Describe improvements made during testing and refinement.',
+                    'Perform a short musical piece demonstrating functionality.',
+                ],
+            },
+            {
+                title: 'Judging Criteria',
+                rows: [
+                    ['Creativity & Originality', '20'],
+                    ['Functionality & Sound Quality', '20'],
+                    ['Engineering & Craftsmanship', '20'],
+                    ['Design Process & Problem Solving', '20'],
+                    ['Presentation', '20'],
+                ],
+            },
+        ],
+    },
+];
+
 const chapters = [
     {
         no: '01',
@@ -935,253 +1479,106 @@ function renderEvents() {
     setupTilt();
 }
 
-const EVENT_THEMES = {
-    '01': { color: '#ffd166', icon: 'fa-lightbulb' },
-    '02': { color: '#8fd6ff', icon: 'fa-microchip' },
-    '03': { color: '#ff8fab', icon: 'fa-camera' },
-    '04': { color: '#9dffb0', icon: 'fa-guitar' },
-};
-
-function renderScorePanel(scores) {
-    const scoreTotal = scores.reduce((sum, [, value]) => sum + Number(value), 0);
-    return `
-    <div class="modal-scores">
-      ${scores
-          .map(([key, value]) => {
-              const score = Number(value);
-              const pct = scoreTotal > 0 ? (score / scoreTotal) * 100 : 0;
-              return `
-        <div class="modal-score" style="--score-width:${pct}%">
-          <div class="modal-score-head">
-            <span>${key}</span>
-            <strong>${score}</strong>
-          </div>
-          <span class="modal-score-bar" aria-hidden="true"></span>
-        </div>`;
-          })
-          .join('')}
-    </div>`;
-}
-
-function renderJourney(steps) {
-    return `
-    <ol class="modal-journey">
-      ${steps
+function renderModalSection(section) {
+    const body = section.body ? section.body.map((paragraph) => `<p>${paragraph}</p>`).join('') : '';
+    const isScored = section.rows && /judging/i.test(section.title);
+    const rows =
+        section.rows && !isScored
+            ? `
+    <div class="modal-table">
+      ${section.rows
           .map(
-              (step) => `
-        <li>
-          <span class="modal-journey-marker"><i class="fa-solid ${step.icon}" aria-hidden="true"></i></span>
-          <div class="modal-journey-copy">
-            <strong>${step.title}</strong>
-            <p>${step.text}</p>
-          </div>
-        </li>`,
-          )
-          .join('')}
-    </ol>`;
-}
-
-function renderTags(items) {
-    return `<div class="modal-tags">${items.map((item) => `<span>${item}</span>`).join('')}</div>`;
-}
-
-function renderSpecs(specs) {
-    return `
-    <dl class="modal-specs">
-      ${specs
-          .map(
-              (spec) => `
+              ([key, value]) => `
         <div>
-          <dt><i class="fa-solid ${spec.icon}" aria-hidden="true"></i>${spec.label}</dt>
-          <dd>${spec.value}</dd>
-        </div>`,
-          )
-          .join('')}
-    </dl>`;
-}
-
-function renderTimeline(items) {
-    return `
-    <ol class="modal-timeline">
-      ${items
-          .map(
-              (item) => `
-        <li>
-          <span class="modal-timeline-date">${item.date}</span>
-          <div class="modal-timeline-copy">
-            <strong>${item.label}</strong>
-            ${item.text ? `<p>${item.text}</p>` : ''}
-          </div>
-        </li>`,
-          )
-          .join('')}
-    </ol>`;
-}
-
-function renderList(items) {
-    return `
-    <ul class="modal-list">
-      ${items
-          .map(
-              (item) => `
-        <li>
-          <i class="fa-solid ${item.icon}" aria-hidden="true"></i>
-          <span>${item.text || item.name}</span>
-        </li>`,
-          )
-          .join('')}
-    </ul>`;
-}
-
-function renderGroups(groups, note) {
-    return `
-    <div class="modal-groups">
-      ${groups
-          .map(
-              (group) => `
-        <div class="modal-group">
-          <h4><i class="fa-solid ${group.icon}" aria-hidden="true"></i>${group.title}</h4>
-          <ul>${group.items.map((item) => `<li>${item}</li>`).join('')}</ul>
-        </div>`,
+          <span>${key}</span>
+          <strong>${value}</strong>
+        </div>
+      `,
           )
           .join('')}
     </div>
-    ${note ? `<p class="modal-aside">${note}</p>` : ''}`;
-}
-
-function renderFinale(chapter) {
-    const meta = chapter.cards
-        .map(
-            (card) =>
-                `<span><i class="fa-solid ${card.icon}" aria-hidden="true"></i>${card.label}: <strong>${card.value}</strong></span>`,
-        )
-        .join('');
-    const scores = chapter.scores ? renderScorePanel(chapter.scores) : '';
-    const note = chapter.note ? `<p class="modal-aside">${chapter.note}</p>` : '';
-    return `<div class="modal-finale-meta">${meta}</div>${note}${scores}`;
-}
-
-function renderSlideOrder(steps) {
-    return `
-    <div class="modal-slide-order">
-      <p class="modal-subhead">Slide order</p>
-      <ol>
-        ${steps.map((step) => `<li>${step}</li>`).join('')}
-      </ol>
-    </div>`;
-}
-
-function renderStorySection(chapter) {
-    let body = '';
-
-    switch (chapter.type) {
-        case 'steps':
-            body = renderJourney(chapter.steps);
-            break;
-        case 'chips':
-            body = renderTags(chapter.items);
-            break;
-        case 'specs':
-            body = renderSpecs(chapter.specs);
-            if (chapter.steps) body += renderSlideOrder(chapter.steps);
-            break;
-        case 'timeline':
-            body = renderTimeline(chapter.items);
-            break;
-        case 'scores':
-            body = renderScorePanel(chapter.scores);
-            break;
-        case 'cards':
-        case 'materials':
-            body = renderList(chapter.items);
-            break;
-        case 'tool-groups':
-        case 'rule-groups':
-            body = renderGroups(chapter.groups, chapter.note);
-            break;
-        case 'finale':
-            body = renderFinale(chapter);
-            break;
-        default:
-            break;
-    }
-
-    const lead = chapter.hook ? `<p class="modal-section-lead">${chapter.hook}</p>` : '';
-    const aside = chapter.callout ? `<p class="modal-aside">${chapter.callout}</p>` : '';
+  `
+            : '';
+    const scoreTotal = isScored ? section.rows.reduce((sum, [, value]) => sum + Number(value), 0) : 0;
+    const scores = isScored
+        ? `
+    <div class="score-panel">
+      <div class="score-summary">
+        <span>${scoreTotal} points</span>
+      </div>
+      <div class="score-list">
+        ${section.rows
+            .map(([key, value]) => {
+                const score = Number(value);
+                const pct = scoreTotal > 0 ? (score / scoreTotal) * 100 : 0;
+                return `
+            <div class="score-row" style="--score-width:${pct}%">
+              <div>
+                <span>${key}</span>
+                <strong>${score}</strong>
+              </div>
+              <i aria-hidden="true"></i>
+            </div>
+          `;
+            })
+            .join('')}
+      </div>
+    </div>
+  `
+        : '';
+    const items = section.items ? `<ul>${section.items.map((item) => `<li>${item}</li>`).join('')}</ul>` : '';
+    const groups = section.groups
+        ? section.groups
+              .map(
+                  ([title, groupItems]) => `
+    <div class="modal-group">
+      <h4>${title}</h4>
+      <ul>${groupItems.map((item) => `<li>${item}</li>`).join('')}</ul>
+    </div>
+  `,
+              )
+              .join('')
+        : '';
 
     return `
-    <section class="modal-section" id="story-${chapter.id}">
-      <header class="modal-section-head">
-        <i class="fa-solid ${chapter.icon}" aria-hidden="true"></i>
-        <h3>${chapter.label}</h3>
-      </header>
-      ${lead}
-      ${aside}
+    <section class="modal-section">
+      <h3>${section.title}</h3>
       ${body}
-    </section>`;
-}
-
-let modalScrollY = 0;
-
-function lockBodyForModal() {
-    modalScrollY = window.scrollY;
-    document.body.style.top = `-${modalScrollY}px`;
-    document.body.classList.add('modal-open');
-}
-
-function unlockBodyForModal() {
-    const scrollY = modalScrollY;
-    document.body.classList.remove('modal-open');
-    document.body.style.top = '';
-    window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' });
-    requestAnimationFrame(() => {
-        window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' });
-    });
+      ${rows}
+      ${scores}
+      ${items}
+      ${groups}
+    </section>
+  `;
 }
 
 function openModal(event) {
     if (!event) return;
+    event = modalEvents.find((modalEvent) => modalEvent.no === event.no) || event;
     const dialog = document.getElementById('event-modal');
-    const theme = EVENT_THEMES[event.no] || EVENT_THEMES['01'];
-
-    dialog.style.setProperty('--modal-accent', theme.color);
-    dialog.dataset.event = event.no;
-
-    const modeEl = document.getElementById('modal-mode');
-    modeEl.textContent = event.mode;
-    modeEl.className = `modal-mode modal-mode--${event.mode === 'Hybrid' ? 'hybrid' : 'onsite'}`;
-
-    document.getElementById('modal-event-no').textContent = `Event ${event.no}`;
+    dialog.querySelector('.modal-visual').dataset.seed = Number(event.no);
+    dialog.querySelector('.modal-visual').dataset.mode = event.mode;
+    document.getElementById('modal-meta').textContent = `No. ${event.no} . ${event.mode}`;
     document.getElementById('modal-title').textContent = event.name;
-    document.getElementById('modal-hook').textContent = event.hook || event.long || '';
-
-    document.getElementById('modal-meta-chips').innerHTML = (event.stats || [])
+    document.getElementById('modal-tag').textContent = event.tag;
+    document.getElementById('modal-long').textContent = event.long;
+    document.getElementById('modal-details').innerHTML = event.details
         .map(
-            (stat) => `
-      <span class="modal-chip">
-        <i class="fa-solid ${stat.icon}" aria-hidden="true"></i>
-        <strong>${stat.value}</strong>
-        ${stat.label}
-      </span>`,
+            ([key, value]) => `
+    <div><span>${key}</span><strong>${value}</strong></div>
+  `,
         )
         .join('');
-
-    const chapters = event.story || [];
-    document.getElementById('modal-chapters').innerHTML = chapters.map(renderStorySection).join('');
-
-    const rulesEl = document.getElementById('modal-rules');
-    const quickRules = document.getElementById('modal-quickrules');
-    const showRules = event.rules && event.rules.length > 0;
-    rulesEl.innerHTML = showRules ? event.rules.map((rule) => `<li>${rule}</li>`).join('') : '';
-    quickRules.hidden = !showRules;
-
-    const inner = dialog.querySelector('.modal-inner');
-    inner.scrollTop = 0;
-    lockBodyForModal();
+    document.getElementById('modal-rules').innerHTML = event.rules.map((rule) => `<li>${rule}</li>`).join('');
+    document.getElementById('modal-sections').innerHTML = (event.sections || []).map(renderModalSection).join('');
+    const modalBody = dialog.querySelector('.modal-body');
+    modalBody.scrollTop = 0;
+    renderGlyphs();
     dialog.showModal();
     requestAnimationFrame(() => {
-        inner.scrollTop = 0;
+        modalBody.scrollTop = 0;
     });
+    document.body.classList.add('modal-open');
 }
 
 function setupModal() {
@@ -1190,7 +1587,7 @@ function setupModal() {
     dialog.addEventListener('click', (event) => {
         if (event.target === dialog) dialog.close();
     });
-    dialog.addEventListener('close', unlockBodyForModal);
+    dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
 }
 
 function updateChapter() {
