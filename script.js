@@ -1709,6 +1709,7 @@ const scrollState = {
     ticking: false,
     philosophy: null,
     timeline: null,
+    modalY: 0,
 };
 
 if ('scrollRestoration' in history) {
@@ -1766,6 +1767,7 @@ function setupAnchorSmoothScroll() {
 }
 
 function setupMarquee() {
+    const tickers = [];
     document.querySelectorAll('.ticker').forEach((ticker) => {
         if (ticker.dataset.loopReady) return;
         ticker.dataset.loopReady = 'true';
@@ -1774,9 +1776,36 @@ function setupMarquee() {
         const singleWidth = ticker.scrollWidth;
         const copies = Math.max(4, Math.ceil((window.innerWidth * 2.5) / Math.max(1, singleWidth)) + 2);
         ticker.innerHTML = Array.from({ length: copies }, () => content).join('');
-        ticker.style.setProperty('--ticker-shift', `${singleWidth}px`);
-        ticker.style.setProperty('--ticker-duration', `${Math.max(12, singleWidth / 90)}s`);
+        tickers.push({
+            el: ticker,
+            width: singleWidth,
+            speed: ticker.classList.contains('ticker-reverse') ? -42 : 52,
+            offset: 0,
+            visible: true,
+        });
     });
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const item = tickers.find((ticker) => ticker.el === entry.target);
+            if (item) item.visible = entry.isIntersecting;
+        });
+    });
+    tickers.forEach((ticker) => io.observe(ticker.el));
+
+    let last = performance.now();
+    function frame(now) {
+        const delta = Math.min(64, now - last) / 1000;
+        last = now;
+        tickers.forEach((ticker) => {
+            if (!ticker.visible || !ticker.width) return;
+            ticker.offset = (ticker.offset + ticker.speed * delta) % ticker.width;
+            if (ticker.offset < 0) ticker.offset += ticker.width;
+            ticker.el.style.transform = `translate3d(${-ticker.offset}px, 0, 0)`;
+        });
+        requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
 }
 
 function updateProgress() {
@@ -2048,6 +2077,36 @@ function isStandaloneHeadingLine(line) {
     return /^\s*\*\*([^:*]+?)\*\*\s*$/.test(line);
 }
 
+function getPlainModalText(value) {
+    return renderModalInline(value)
+        .replace(/<[^>]*>/g, '')
+        .replace(/&amp;/g, '&')
+        .replace(/&#39;/g, "'")
+        .replace(/&quot;/g, '"')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function isModalSectionHeading(value) {
+    const text = getPlainModalText(value)
+        .replace(/^\s*#+\s*/, '')
+        .replace(/^\s*\d+\\?\.\s*/, (match) => match.replace('\\', ''))
+        .trim();
+    const lower = text.toLowerCase();
+    return (
+        /^\d+\.\s+\S/.test(text) ||
+        /^[a-z]\)\s+\S/i.test(text) ||
+        /^[a-z]\.\s+\S/i.test(text) ||
+        /^(preliminary round|final round|sample challenge statements|required files|presentation specifications|ai development platforms|design tools|competition guidelines)$/i.test(lower)
+    );
+}
+
+function renderModalHeading(value, level = 4) {
+    const plain = getPlainModalText(value);
+    const tag = level === 3 ? 'h3' : 'h4';
+    return `<${tag}>${escapeModalHtml(plain)}</${tag}>`;
+}
+
 function renderModalMarkdown(source, event) {
     const lines = source.trim().split(/\r?\n/);
     const output = [];
@@ -2087,12 +2146,13 @@ function renderModalMarkdown(source, event) {
         const heading = line.match(/^#{1,6}\s+(.+)$/);
         if (heading) {
             const headingText = heading[1].trim();
-            const headingTag = /^(\*\*)?.+?:/.test(headingText) ? 'p' : 'h3';
-            output.push(
-                headingTag === 'p'
-                    ? `<div class="modal-fact-lines"><p>${renderModalInline(headingText)}</p></div>`
-                    : `<h3>${renderModalInline(headingText)}</h3>`,
-            );
+            if (/^(\*\*)?.+?:/.test(headingText)) {
+                output.push(`<div class="modal-fact-lines"><p>${renderModalInline(headingText)}</p></div>`);
+            } else if (isModalSectionHeading(headingText)) {
+                output.push(renderModalHeading(headingText, 3));
+            } else {
+                output.push(`<p class="modal-emphasis">${renderModalInline(headingText)}</p>`);
+            }
             hasContent = true;
             index += 1;
             continue;
@@ -2100,7 +2160,18 @@ function renderModalMarkdown(source, event) {
 
         const standaloneHeading = line.match(/^\s*\*\*([^:*]+?)\*\*\s*$/);
         if (standaloneHeading) {
-            output.push(`<h4>${renderModalInline(standaloneHeading[1])}</h4>`);
+            output.push(
+                isModalSectionHeading(standaloneHeading[1])
+                    ? renderModalHeading(standaloneHeading[1], 4)
+                    : `<p class="modal-emphasis">${renderModalInline(line.trim())}</p>`,
+            );
+            hasContent = true;
+            index += 1;
+            continue;
+        }
+
+        if (isModalSectionHeading(line)) {
+            output.push(renderModalHeading(line, 4));
             hasContent = true;
             index += 1;
             continue;
@@ -2161,6 +2232,7 @@ function openModal(event) {
     if (!event) return;
     event = modalEvents.find((modalEvent) => modalEvent.no === event.no) || event;
     const dialog = document.getElementById('event-modal');
+    scrollState.modalY = window.scrollY;
     dialog.querySelector('.modal-visual').dataset.seed = Number(event.no);
     dialog.querySelector('.modal-visual').dataset.mode = event.mode;
     const source = getModalSource(event.no);
@@ -2178,6 +2250,7 @@ function openModal(event) {
     requestAnimationFrame(() => {
         modalBody.scrollTop = 0;
     });
+    document.body.style.top = `-${scrollState.modalY}px`;
     document.body.classList.add('modal-open');
 }
 
@@ -2187,7 +2260,11 @@ function setupModal() {
     dialog.addEventListener('click', (event) => {
         if (event.target === dialog) dialog.close();
     });
-    dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+    dialog.addEventListener('close', () => {
+        document.body.classList.remove('modal-open');
+        document.body.style.top = '';
+        window.scrollTo({ top: scrollState.modalY, left: 0, behavior: 'auto' });
+    });
 }
 
 function updateChapter() {
