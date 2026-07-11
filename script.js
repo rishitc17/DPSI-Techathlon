@@ -1745,9 +1745,7 @@ function getTimelineCache() {
         list,
         copy,
         milestones: [...list.querySelectorAll('.timeline-milestone')],
-        number: document.getElementById('timeline-copy-number'),
         lastIndex: section ? Number(section.dataset.timelineIndex) : -1,
-        lastNumberX: null,
     };
     return scrollState.timeline;
 }
@@ -2023,14 +2021,47 @@ function renderModalInline(value) {
         .replace(/\*(.+?)\*/g, '<em>$1</em>');
 }
 
-function renderModalMarkdown(source) {
+function normalizeModalText(value) {
+    return value
+        .replace(/^#+\s+/, '')
+        .replace(/\\([\\`*_{}\[\]()<>#+.!&-])/g, '$1')
+        .replace(/[*_`]/g, '')
+        .replace(/^\d+\.\s+/, '')
+        .replace(/\s+/g, ' ')
+        .replace(/:$/, '')
+        .trim()
+        .toLowerCase();
+}
+
+function isEmptyLabelLine(line) {
+    return /^\*{0,2}[^:*]+:\*{0,2}\s*$/.test(line.trim());
+}
+
+function shouldSkipModalLine(line, event, hasContent) {
+    const normalized = normalizeModalText(line);
+    if (isEmptyLabelLine(line)) return true;
+    if (hasContent) return false;
+    return normalized === normalizeModalText(event.name) || normalized === normalizeModalText(event.tag);
+}
+
+function isStandaloneHeadingLine(line) {
+    return /^\s*\*\*([^:*]+?)\*\*\s*$/.test(line);
+}
+
+function renderModalMarkdown(source, event) {
     const lines = source.trim().split(/\r?\n/);
     const output = [];
     let index = 0;
+    let hasContent = false;
 
     while (index < lines.length) {
         const line = lines[index];
         if (!line.trim()) {
+            index += 1;
+            continue;
+        }
+
+        if (shouldSkipModalLine(line, event, hasContent)) {
             index += 1;
             continue;
         }
@@ -2040,15 +2071,37 @@ function renderModalMarkdown(source) {
             while (index < lines.length && /^\|/.test(lines[index])) tableLines.push(lines[index++]);
             const rows = tableLines.map((row) => row.split('|').slice(1, -1).map((cell) => cell.trim()));
             const isDivider = (row) => row.every((cell) => /^:?-{3,}:?$/.test(cell));
-            const header = rows[0];
-            const body = rows.slice(1).filter((row) => !isDivider(row));
-            output.push(`<div class="modal-markdown-table"><table><thead><tr>${header.map((cell) => `<th>${renderModalInline(cell)}</th>`).join('')}</tr></thead><tbody>${body.map((row) => `<tr>${row.map((cell) => `<td>${renderModalInline(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+            const firstRowIsEventName = normalizeModalText(rows[0]?.[0] || '') === 'event name';
+            const header = firstRowIsEventName ? null : rows[0];
+            const body = rows
+                .slice(header ? 1 : 0)
+                .filter((row) => !isDivider(row))
+                .filter((row) => normalizeModalText(row[0] || '') !== 'event name')
+                .filter((row) => row.some((cell) => normalizeModalText(cell)));
+            const tableHead = header ? `<thead><tr>${header.map((cell) => `<th>${renderModalInline(cell)}</th>`).join('')}</tr></thead>` : '';
+            output.push(`<div class="modal-markdown-table"><table>${tableHead}<tbody>${body.map((row) => `<tr>${row.map((cell) => `<td>${renderModalInline(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+            hasContent = true;
             continue;
         }
 
         const heading = line.match(/^#{1,6}\s+(.+)$/);
         if (heading) {
-            output.push(`<h3>${renderModalInline(heading[1])}</h3>`);
+            const headingText = heading[1].trim();
+            const headingTag = /^(\*\*)?.+?:/.test(headingText) ? 'p' : 'h3';
+            output.push(
+                headingTag === 'p'
+                    ? `<div class="modal-fact-lines"><p>${renderModalInline(headingText)}</p></div>`
+                    : `<h3>${renderModalInline(headingText)}</h3>`,
+            );
+            hasContent = true;
+            index += 1;
+            continue;
+        }
+
+        const standaloneHeading = line.match(/^\s*\*\*([^:*]+?)\*\*\s*$/);
+        if (standaloneHeading) {
+            output.push(`<h4>${renderModalInline(standaloneHeading[1])}</h4>`);
+            hasContent = true;
             index += 1;
             continue;
         }
@@ -2065,14 +2118,27 @@ function renderModalMarkdown(source) {
                 index += 1;
             }
             output.push(`<${tag}>${items.join('')}</${tag}>`);
+            hasContent = true;
             continue;
         }
 
         const paragraph = [];
-        while (index < lines.length && lines[index].trim() && !/^\||^#{1,6}\s+|^\*\s+|^\d+\\?\.\s+/.test(lines[index])) {
-            paragraph.push(lines[index++].trim());
+        while (
+            index < lines.length &&
+            lines[index].trim() &&
+            !/^\||^#{1,6}\s+|^\*\s+|^\d+\\?\.\s+/.test(lines[index]) &&
+            !isStandaloneHeadingLine(lines[index])
+        ) {
+            const currentLine = lines[index].trim();
+            if (!shouldSkipModalLine(currentLine, event, hasContent)) paragraph.push(currentLine);
+            index += 1;
         }
-        output.push(`<p>${renderModalInline(paragraph.join(' '))}</p>`);
+        if (paragraph.length) {
+            const factLines = paragraph.every((item) => /^(\*\*)?.+?:/.test(item));
+            const rendered = paragraph.map((item) => renderModalInline(item)).join(factLines ? '' : '<br>');
+            output.push(factLines ? `<div class="modal-fact-lines">${paragraph.map((item) => `<p>${renderModalInline(item)}</p>`).join('')}</div>` : `<p>${rendered}</p>`);
+            hasContent = true;
+        }
     }
 
     return `<section class="modal-section modal-source">${output.join('')}</section>`;
@@ -2104,7 +2170,7 @@ function openModal(event) {
     document.getElementById('modal-long').hidden = true;
     document.getElementById('modal-details').hidden = true;
     document.getElementById('modal-rules').hidden = true;
-    document.getElementById('modal-sections').innerHTML = renderModalMarkdown(source);
+    document.getElementById('modal-sections').innerHTML = renderModalMarkdown(source, event);
     const modalBody = dialog.querySelector('.modal-body');
     modalBody.scrollTop = 0;
     renderGlyphs();
@@ -2268,19 +2334,11 @@ function setupTilt() {
     });
 }
 
-const timelinePhases = [
-    { no: '01', phase: 'Registration' },
-    { no: '02', phase: 'Resources' },
-    { no: '03', phase: 'Submissions' },
-    { no: '04', phase: 'Results' },
-    { no: '05', phase: 'Finale' },
-];
-
 function updateTimelineProgress() {
     const cache = getTimelineCache();
     if (!cache) return;
 
-    const { section, list, copy, milestones, number } = cache;
+    const { section, list, copy, milestones } = cache;
     if (!milestones.length) return;
 
     const viewport = window.innerHeight;
@@ -2301,12 +2359,6 @@ function updateTimelineProgress() {
         if (itemCenter <= anchor) activeIndex = index;
     });
 
-    const activeRect = itemRects[activeIndex];
-    const nextRect = itemRects[activeIndex + 1];
-    const segmentTop = activeRect.top;
-    const segmentBottom = nextRect ? nextRect.top : activeRect.bottom;
-    const local = Math.min(1, Math.max(0, (anchor - segmentTop) / Math.max(1, segmentBottom - segmentTop)));
-
     if (activeIndex !== cache.lastIndex) {
         cache.lastIndex = activeIndex;
         milestones.forEach((item, index) => {
@@ -2314,19 +2366,6 @@ function updateTimelineProgress() {
             item.classList.toggle('is-complete', index < activeIndex);
         });
         if (section) section.dataset.timelineIndex = String(activeIndex);
-        if (number) number.classList.add('switching');
-        window.setTimeout(() => {
-            const current = timelinePhases[activeIndex];
-            if (number) number.textContent = current.no;
-            if (number) number.classList.remove('switching');
-        }, 160);
-    }
-
-    const numberX = Math.round((local - 0.5) * -28);
-
-    if (numberX !== cache.lastNumberX) {
-        cache.lastNumberX = numberX;
-        copy.style.setProperty('--timeline-number-x', `${numberX}px`);
     }
 }
 

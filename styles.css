@@ -744,6 +744,19 @@ em {
     opacity: 0.85;
 }
 
+.ticker-star {
+    color: var(--ember);
+    font-size: clamp(1.45rem, 3vw, 2.45rem);
+    opacity: 0.95;
+    text-shadow: 0 0 20px oklch(0.72 0.15 228 / 55%);
+}
+
+.flow-divider {
+    width: clamp(2.8rem, 7vw, 5.5rem);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.96 0.02 230 / 38%), transparent);
+}
+
 .section {
     position: relative;
     display: grid;
@@ -1456,42 +1469,17 @@ h2 {
 }
 
 .timeline-copy {
-    position: relative;
+    position: sticky;
+    top: clamp(5.5rem, 14vh, 8rem);
     align-self: start;
-    transform: translateY(var(--timeline-copy-y, 0));
 }
 
 /* Keep scroll-sync translateY above .reveal.in { transform: translateY(0) } */
 .timeline-copy.reveal.in {
-    transform: translateY(var(--timeline-copy-y, 0));
+    transform: none;
     transition:
         opacity 850ms ease,
         filter 850ms ease;
-}
-
-.timeline-copy-number {
-    position: absolute;
-    left: -0.12em;
-    top: -0.1em;
-    z-index: -1;
-    color: transparent;
-    -webkit-text-stroke: 1.5px var(--ember);
-    font-family: var(--font-display);
-    font-size: clamp(9rem, 22vw, 16rem);
-    line-height: 0.8;
-    opacity: 0.32;
-    pointer-events: none;
-    transform: translateX(var(--timeline-number-x, 0));
-    filter: blur(var(--timeline-number-blur, 0));
-    transition:
-        opacity 420ms ease,
-        filter 420ms ease,
-        transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.timeline-copy-number.switching {
-    opacity: 0;
-    filter: blur(8px);
 }
 
 .timeline-list {
@@ -1954,22 +1942,47 @@ h2 {
 
 .modal-source {
     display: grid;
-    gap: 0.2rem;
+    gap: 0.55rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .modal-source h3 {
-    margin-top: 1.8rem;
-    line-height: 1.45;
+    margin: 1.9rem 0 0.25rem;
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 4vw, 2.65rem);
+    font-weight: 400;
+    line-height: 1.05;
 }
 
 .modal-source h3:first-child {
     margin-top: 0;
 }
 
+.modal-source h4 {
+    margin: 1.2rem 0 0.2rem;
+    color: var(--ember);
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.modal-source p {
+    margin: 0;
+}
+
 .modal-source ul,
 .modal-source ol {
-    margin: 0.2rem 0 0.7rem;
+    display: grid;
+    gap: 0.45rem;
+    margin: 0.15rem 0 0.85rem;
     padding-left: 1.35rem;
+    color: oklch(0.96 0.02 230 / 78%);
+    line-height: 1.6;
 }
 
 .modal-source a {
@@ -1978,9 +1991,10 @@ h2 {
 
 .modal-markdown-table {
     overflow-x: auto;
-    margin: 0.7rem 0;
+    margin: 0.65rem 0 1rem;
     border: 1px solid var(--line);
     border-radius: 6px;
+    background: oklch(0.12 0.032 264 / 48%);
 }
 
 .modal-markdown-table table {
@@ -2002,10 +2016,22 @@ h2 {
 
 .modal-markdown-table th {
     color: var(--paper);
-    font-family: var(--font-mono);
-    font-size: 0.67rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    background: oklch(0.18 0.04 264 / 64%);
+}
+
+.modal-fact-lines {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0.1rem 0 0.75rem;
+}
+
+.modal-fact-lines p {
+    padding: 0.2rem 0 0.2rem 0.75rem;
+    border-left: 2px solid var(--ember);
 }
 
 .modal-table {
@@ -2366,13 +2392,7 @@ h2 {
     }
 
     .timeline-copy {
-        transform: none;
-    }
-
-    .timeline-copy-number {
-        top: -4.5rem;
-        font-size: clamp(7rem, 28vw, 11rem);
-        opacity: 0.22;
+        top: 5rem;
     }
 }
 
