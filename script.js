@@ -1710,6 +1710,7 @@ const scrollState = {
     philosophy: null,
     timeline: null,
     modalY: 0,
+    chapterTriggerReady: false,
 };
 
 if ('scrollRestoration' in history) {
@@ -1721,7 +1722,7 @@ function scheduleScrollWork() {
     scrollState.ticking = true;
     requestAnimationFrame(() => {
         updateProgress();
-        updateChapter();
+        if (!scrollState.chapterTriggerReady) updateChapter();
         updateTimelineProgress();
         scrollState.ticking = false;
     });
@@ -2395,6 +2396,49 @@ function setupChapterScrollLock() {
     );
 }
 
+function setupChapterScrollTrigger() {
+    const section = document.querySelector('.philosophy');
+    const stage = document.querySelector('.philosophy-stage');
+    if (!section || !stage || prefersReducedMotion) {
+        setChapterProgress(0);
+        return;
+    }
+
+    if (!window.gsap || !window.ScrollTrigger) {
+        setupChapterScrollLock();
+        setChapterProgress(0);
+        return;
+    }
+
+    window.gsap.registerPlugin(window.ScrollTrigger);
+    scrollState.chapterTriggerReady = true;
+
+    window.ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: () => `+=${Math.max(window.innerHeight * 5.5, stage.offsetHeight * 4.5)}`,
+        pin: stage,
+        pinSpacing: true,
+        scrub: 0.7,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        snap: {
+            snapTo: 1 / chapters.length,
+            duration: { min: 0.18, max: 0.42 },
+            delay: 0.04,
+            ease: 'power2.out',
+        },
+        onUpdate: (self) => {
+            setChapterProgress(self.progress);
+        },
+        onRefresh: (self) => {
+            setChapterProgress(self.progress);
+        },
+    });
+
+    setChapterProgress(0);
+}
+
 function applyChapter(index) {
     const chapter = chapters[index];
     document.getElementById('chapter-number').textContent = chapter.no;
@@ -2797,7 +2841,7 @@ window.addEventListener('scroll', scheduleScrollWork, { passive: true });
 window.addEventListener('DOMContentLoaded', () => {
     if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     setupMarquee();
-    setupChapterScrollLock();
+    setupChapterScrollTrigger();
     setupAnchorSmoothScroll();
     revealOnScroll();
     countStats();
