@@ -1874,15 +1874,15 @@ function glyphSvg(seed = 1, mode = 'offline') {
     const no = Number(seed);
     const glyphs = {
         1: 'fa-lightbulb',
-        2: 'fa-microchip',
-        3: 'fa-camera',
+        2: 'fa-camera',
+        3: 'fa-microchip',
         4: 'fa-guitar',
         7: 'fa-eye',
     };
     const colors = {
         1: '#ffd166',
-        2: '#f7f7ff',
-        3: '#ff8fab',
+        2: '#ff8fab',
+        3: '#f7f7ff',
         4: '#9dffb0',
         7: '#f7f7ff',
     };
