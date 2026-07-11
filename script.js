@@ -2493,13 +2493,14 @@ function updateTimelineProgress() {
 
     if (!copy) return;
 
-    const anchor = viewport * 0.4;
     const itemRects = milestones.map((item) => item.getBoundingClientRect());
-    let activeIndex = 0;
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    const dotOffset = rootFontSize * 2.15;
+    let activeIndex = -1;
 
     itemRects.forEach((itemRect, index) => {
-        const itemCenter = itemRect.top + itemRect.height / 2;
-        if (itemCenter <= anchor) activeIndex = index;
+        const dotY = itemRect.top - listRect.top + dotOffset;
+        if (listRect.height * progress >= dotY) activeIndex = index;
     });
 
     if (activeIndex !== cache.lastIndex) {

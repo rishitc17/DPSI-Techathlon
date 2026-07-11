@@ -1132,6 +1132,13 @@ h2 {
     font-weight: 800;
     line-height: 1;
     text-transform: uppercase;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center;
+    transition:
+        border-color 220ms ease,
+        color 220ms ease,
+        box-shadow 260ms ease,
+        transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .event-group-link i {
@@ -1143,7 +1150,7 @@ h2 {
 .event-group-link:hover {
     border-color: var(--ember);
     color: var(--paper);
-    transform: translateY(-1px);
+    transform: translate3d(0, -2px, 0) scale(1.025);
     box-shadow:
         0 0 0 1px oklch(0.75 0.15 225 / 22%),
         0 0 34px oklch(0.75 0.15 225 / 34%);
@@ -1628,6 +1635,10 @@ h2 {
     border-radius: 50%;
     background: var(--muted);
     box-shadow: 0 0 0 0.35rem var(--card);
+    transition:
+        background 180ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
 }
 
 .timeline-list li.main-day::before {
@@ -1648,9 +1659,6 @@ h2 {
         0 0 0 0.35rem var(--card),
         0 0 18px var(--ember);
     transform: scale(1.15);
-    transition:
-        transform 220ms ease,
-        box-shadow 220ms ease;
 }
 
 .timeline-list li.is-active .timeline-step,
@@ -2185,10 +2193,17 @@ h2 {
     font-size: 0.96rem;
     font-weight: 800;
     box-shadow: 0 0 24px oklch(0.75 0.15 225 / 34%);
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center;
+    transition:
+        box-shadow 260ms ease,
+        transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 260ms ease;
 }
 
 .event-brief-modal .modal-submission-callout a:hover {
-    transform: translateY(-1px);
+    transform: translate3d(0, -2px, 0) scale(1.035);
+    filter: saturate(1.08);
     box-shadow: 0 0 32px oklch(0.75 0.15 225 / 48%);
 }
 
