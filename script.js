@@ -134,7 +134,7 @@ const events = [
                     { icon: 'fa-calendar', label: 'Date', value: 'Tue, Aug 18, 2026' },
                     { icon: 'fa-stopwatch', label: 'Pitch', value: '6 minutes' },
                     { icon: 'fa-comments', label: 'Q&A', value: '4 minutes' },
-                    { icon: 'fa-laptop', label: 'Format', value: 'PPT/PDF + optional demo' },
+                    { icon: 'fa-laptop', label: 'Format', value: 'PPT/PDF + demo' },
                 ],
                 note: 'Outstation schools present virtually via Microsoft Teams.',
                 scores: [
@@ -778,7 +778,7 @@ Shortlisted teams from outstation schools may present virtually via Microsoft Te
 
 ### **Q\&A:** 4 minutes
 
-### **Presentation Format:** PPT/PDF with optional prototype demonstration
+### **Presentation Format:** PPT/PDF with prototype demonstration
 
 ### **Outstation schools whose teams are shortlisted may present virtually through Microsoft Teams.**
 
@@ -1241,7 +1241,7 @@ const modalEvents = [
                     ['Venue', 'DPS International School, Gurugram'],
                     ['Presentation', '6 minutes'],
                     ['Q&A', '4 minutes'],
-                    ['Format', 'PPT or PDF with optional prototype demonstration'],
+                    ['Format', 'PPT or PDF with prototype demonstration'],
                     ['Outstation Schools', 'Shortlisted teams may present via Microsoft Teams'],
                 ],
             },
