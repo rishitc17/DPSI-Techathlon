@@ -1952,6 +1952,62 @@ h2 {
     line-height: 1.65;
 }
 
+.modal-source {
+    display: grid;
+    gap: 0.2rem;
+}
+
+.modal-source h3 {
+    margin-top: 1.8rem;
+    line-height: 1.45;
+}
+
+.modal-source h3:first-child {
+    margin-top: 0;
+}
+
+.modal-source ul,
+.modal-source ol {
+    margin: 0.2rem 0 0.7rem;
+    padding-left: 1.35rem;
+}
+
+.modal-source a {
+    color: var(--ember);
+}
+
+.modal-markdown-table {
+    overflow-x: auto;
+    margin: 0.7rem 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.modal-markdown-table table {
+    width: 100%;
+    min-width: 32rem;
+    border-collapse: collapse;
+    color: oklch(0.96 0.02 230 / 78%);
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.modal-markdown-table th,
+.modal-markdown-table td {
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.modal-markdown-table th {
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .modal-table {
     display: grid;
     gap: 1px;

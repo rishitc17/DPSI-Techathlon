@@ -672,6 +672,464 @@ const events = [
     },
 ];
 
+const modalEventSource = String.raw`
+### **INNOVATEX CHALLENGE**
+
+### ***Design the Future. Create Meaningful Impact.***
+
+Venue: Project Room, Secondary Building (4th floor)
+
+**1\. EVENT OVERVIEW**
+
+| Event Name | InnovateX Challenge |
+| :---- | :---- |
+| **Category** | **Technology Innovation Challenge** |
+| **Mode** | **Two Rounds â€“ Preliminary Round (Online Submission) & Grand Finale (Presentation at Host School / Microsoft Teams for Outstation Schools)** |
+| **Number of Entries** | **One team per school** |
+| **Team Size** | **2â€“4 participants (Grades IXâ€“XII)** |
+
+**2\. GUIDELINES \- PRELIMINARY ROUND (ONLINE)**
+
+**a) Challenge**
+
+Inspired by the Techathlon 2026 theme "Imagining an Impactful Future," teams are required to identify an authentic real-world problem and propose an innovative technology-enabled solution that creates meaningful impact.
+
+Solutions should demonstrate creativity, inquiry, empathy, feasibility, and responsible use of technology.
+**b) Suggested Challenge Areas**
+Teams will have to choose one of the following challenge areas (or another relevant challenge aligned with the theme):
+
+* Health & Well-being
+* Inclusive Education
+* Environmental Sustainability
+* Smart Communities
+* Digital Citizenship
+* Accessibility
+* Community Development
+* Responsible AI
+* Disaster Management
+* Future of Learning
+
+**d) WHAT CAN YOUR SOLUTION BE?**
+Solutions may take any of the following forms:
+
+* Mobile Application
+* Website or Web Platform
+* AI-enabled Solution
+* IoT Prototype
+* Physical Product Prototype
+* Robotics Concept
+
+
+**Teams are encouraged to choose the format that best addresses their selected challenge.**
+
+**c) Submission Requirements**
+**Teams must submit one presentation in PDF or PPTX format.**
+
+**Presentation Specifications**
+
+| Criteria | Requirements |
+| :---- | :---- |
+| **Maximum Slides** | **8 Slides** |
+| **File Format** | **PPTX or PDF** |
+| **File Size** | **Maximum 20 MB** |
+| **Submission Mode** | **Online Submission Link** |
+| **Naming Convention** | **SchoolName\_InnovateX\_2026** |
+| **Submission Deadline** | **Monday, August 6, 2026, 6:00 PM IST** |
+
+**d) Presentation Order**
+
+* Team Introduction (School Name, Team Members, Challenge Title)
+* Problem Statement
+* Target Users
+* Proposed Solution
+* Prototype / Concept (Prototype, Wireframe, Product Design, App Screens, Website Mock-up, Working Model, System Workflow)
+* Impact & Feasibility
+* Future Scope
+* Credits & References
+
+**3\. JUDGEMENT CRITERIA**
+**Preliminary Round**
+
+| Problem Identification & User Understanding | Innovation & Technology Integration | Feasibility & Prototype | Impact & Value Proposition | Presentation & Communication |
+| :---- | :---- | :---- | :---- | :---- |
+| **20** | **20** | **20** | **20** | **20** |
+
+**Preliminary Round Results & Grand Finale**
+
+The results of the Preliminary Round will be announced on the official Techathlon website on Monday, August 10, 2026, at 6:00 p.m. IST.
+
+Shortlisted teams will be invited to participate in the Grand Finale on Tuesday, August 18, 2026, at DPS International School, Gurugram, where they will present their solution along with a demonstration of their working prototype before the judging panel.
+
+Shortlisted teams from outstation schools may present virtually via Microsoft Teams. The meeting link will be shared with the respective teams via email on Sunday, August 16, 2026\.
+
+**Final Round**
+
+| Problem Understanding & User-Centred Thinking | Innovation & Technology Integration | Working Prototype / Demonstration | Impact & Feasibility | Presentation & Communication | Q\&A |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| **20** | **20** | **20** | **20** | **20** | **10** |
+
+**4\. Grand Finale Guidelines**
+
+### **Date:** Tuesday, August 18, 2026
+
+### **Venue:** DPS International School, Gurugram
+
+### **Presentation Time:** 6 minutes
+
+### **Q\&A:** 4 minutes
+
+### **Presentation Format:** PPT/PDF with optional prototype demonstration
+
+### **Outstation schools whose teams are shortlisted may present virtually through Microsoft Teams.**
+
+**5\. General Guidelines**
+
+* Each school may submit one team.
+* All work must be original.
+* Teams may use AI responsibly; any AI tools used must be acknowledged on the Credits slide.
+* Proper credit must be given for all external resources, datasets, images, and software.
+* Solutions should demonstrate responsible and ethical use of technology.
+* Participants must bring their own laptops
+* Wi-Fi access will be provided
+* Judges' decisions will be final and binding.
+
+### **2\. AI for Good Lab**
+
+ ***Think Fast. Build Smart. Create Impact.***
+**Venue:**
+**1\. Event Overview**
+
+| Event Name | AI for Good Lab |
+| :---- | :---- |
+| **Category** | **AI Innovation Sprint** |
+| **Mode** | **Live Challenge (on-site)** |
+| **Number of Entries** | **One team per school** |
+| **Team Size** | **2â€“3 participants (Grades IXâ€“XII)** |
+
+ **2\. Challenge Format**
+
+AI for Good Lab is **a fast-paced innovation challenge** where teams use Artificial Intelligence to design and develop a digital product that addresses a real-world problem. The challenge statement will be revealed at the beginning of the competition.
+Teams will investigate the challenge, generate ideas, build a functional digital solution using AI-assisted development tools, and present their work to the judging panel.
+The emphasis is on creativity, collaboration, responsible AI use, and rapid problem-solving.
+
+ **3\. Challenge Brief**
+
+On the day of the event, all participating teams will receive the challenge statement, aligned with the Techathlon 2026 theme: **"Imagining an Impactful Future."**
+
+Sample Challenge Statements:
+
+* Design a digital solution that helps senior citizens stay socially connected and engaged.
+* Develop an AI-powered assistant that supports students' emotional wellbeing and stress management.
+* Create an AI-powered platform that encourages people to volunteer and participate in community service.
+* Build an AI-powered solution that helps neighbourhoods share resources, reduce waste, and support one another.
+
+**4\. Event Format**
+The challenge statement will be revealed at the start of the competition.
+Each team will have 2 hours to investigate the challenge, brainstorm ideas, and develop a digital product using any AI tools and development platforms.
+At the end of the development phase, teams must submit their digital product and one-page presentation through the designated submission portal.
+Each team will then present their solution to the judging panel.
+
+**Development Time: 2 hours**
+**Team Presentation: 5 minutes**
+**Judges' Q\&A: 3 minutes**
+
+ **5\. Submission Requirements**
+Teams are expected to develop a **Minimum Viable Product (MVP)** that demonstrates the core functionality of their solution.
+Teams may develop a simple digital solution, including but not limited to:
+
+* A 2â€“3 page web application
+* A 2â€“3 screen mobile application
+* An AI chatbot or virtual assistant
+* An AI-powered dashboard
+* An interactive website
+* A workflow automation tool
+* An educational learning tool
+* A community engagement platform
+* A productivity application
+
+ **6\. Permitted AI Tools**
+Participants are encouraged to use AI responsibly throughout the development process.
+
+Examples include:
+
+*  AI Assistants
+*  ChatGPT
+*  Microsoft Copilot
+*  Claude
+*  Gemini
+
+ AI Development Platforms
+
+*  Bolt.new
+*  Lovable
+*  Firebase Studio
+*  Cursor
+*  Windsurf
+*  Replit AI
+*  Vercel v0
+
+ Design Tools
+
+*  Figma AI
+*  Canva AI
+
+Teams may also use any other publicly available AI tools that comply with the competition rules.
+
+ **7\. Judging Criteria**
+
+| Understanding of the Challenge | Innovation & Creativity  | Effective Use of AI   | Product Functionality & User Experience | Potential Impact      | Presentation & Communication |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| **15** | **20** | **20** | **20** | **15** | **10** |
+
+ **8\. Presentation Format**
+Each team will have:
+
+* 5 minutes to demonstrate their product.
+* 3 minutes for questions from the judging panel.
+
+The presentation should clearly explain:
+
+*  The challenge
+*  The proposed solution
+*  AI tools used
+*  Live product demonstration
+*  Expected impact
+
+ **9\. Rules & Regulations**
+
+ **A. General Rules**
+
+* Each school may register one team.
+* The challenge will be revealed only at the start of the event.
+*  Teams must develop their solution entirely during the competition.
+*  Internet access will be provided.
+*  Teams must bring their own laptops and chargers.
+
+**B. AI Usage**
+
+*  AI-assisted development is encouraged.
+*  Teams must disclose all AI tools used.
+*  Participants can explain any AI-generated code or content included in their solution (if needed).
+*  Judges may ask technical questions to verify understanding.
+
+**C. Product Rules**
+
+*  The product must be developed during the competition.
+*  Existing templates, libraries, and open-source frameworks may be used with proper attribution.
+*  Previously developed projects or pre-built solutions are not permitted.
+*  The product does not need to be fully complete but should demonstrate the core functionality.
+
+**D. Code of Conduct**
+
+*  Collaboration is permitted only within registered team members.
+*  All work must comply with academic integrity principles.
+*  Teams must acknowledge external assets and datasets where applicable.
+*  The judges' decision will be final and binding.
+
+# **Through the Lens**
+
+### ***Every Picture Inspires Change.***
+
+1\. Event Overview
+
+| Event Name | Through the Lens |
+| ----- | :---- |
+| **Category** | Visual Storytelling & Digital Campaign Challenge |
+| **Mode** | Two Rounds â€“ Preliminary Round (Online Submission) & Grand Finale (Presentation at Host School / Microsoft Teams for Outstation Schools) |
+| **Number of Entries** | One team per school |
+| **Team Size**  | 1-2 participants |
+| **Eligibility** | Grades IXâ€“XII |
+
+**2\. Guidelines â€“ Preliminary Round**
+
+## **a) Challenge**
+
+Inspired by the Techathlon 2026 theme "Imagining an Impactful Future," participants will use the power of visual storytelling to inspire positive change.
+
+**On Saturday, August 1, 2026,** participants will be able to download a curated image set from the official Techathlon website. Each image set will consist of 2â€“3 authentic, high-resolution photographs based on a common challenge theme. Using one or more of the provided images, participants must create an original campaign poster or digital visual that communicates a meaningful message, raises awareness, and encourages positive action.
+
+The challenge is not simply to edit an image, but to transform visual evidence into a compelling campaign that informs, inspires, and motivates audiences towards imagining a more impactful future.
+
+The emphasis is on thoughtful communication, creativity, and purposeful design rather than artistic perfection.
+
+**b) Suggested Themes**
+Participants will receive curated image sets based on a challenge theme.The image sets will be released on the Techathlon website in the event details section on Saturday, August 1, 2026\.
+
+Examples of challenge themes may include but not limited to:
+
+* Digital Footprints & Online Reputation
+* Responsible Use of Artificial Intelligence
+* Combating Misinformation
+* Cyberbullying & Online Kindness
+
+c) Submission Requirements
+
+### Participants must submit the following through the official Techathlon Submission Form.
+
+### Submission Deadline Thursday, August 6, 2026, 6:00 PM IST
+
+### Required Files
+
+### 1\. Digital Campaign Poster \- Accepted formats: PDF/JPEG/PNG/PPTX. File size should not be more than 20 MB
+
+### **Presentation Specifications \-**
+
+Participants must submit a 2 minute video in MP4 format that includes the following details:
+
+| Introduction: Participant Name, School Name, Campaign Title, Selected Theme |
+| :---- |
+| The Issue: Brief overview of the issue, its significance, affected audience, and supporting facts or statistics |
+| **Target Audience:** Intended audience, desired behavioural change or action, and its significance |
+| **Campaign Visual:** Final campaign poster or digital visual (may include photography, digital illustration, graphic design, typography, photo manipulation, or mixed media) |
+| **Design Rationale:** Creative concept, key design decisions (colour, typography, composition), and how the design communicates the intended message |
+| **Credits & References:** Image credits, references, AI tools used (if any), and software/platforms used |
+
+**3\. Judging Criteria**
+
+## **Preliminary Round**
+
+| Understanding of the Issue | Creativity & Originality  | Visual Communication   | Technical Design Skills | Overall Presentation      |
+| :---- | :---- | :---- | :---- | :---- |
+| **20** | **20** | **25** | **20** | **15** |
+
+**Final Round**
+
+| Understanding of the Issue | Creativity & Innovation | Effectiveness of the Campaign | Design Justification | Presentation and Response to Questions     |
+| :---- | :---- | :---- | :---- | :---- |
+| **15** | **20** | **25** | **20** | **20** |
+
+**4\. Grand Finale Guidelines**
+
+* **Date:** Tuesday, August 18, 2026
+* **Venue:** DPS International School, Gurugram
+* **Presentation Time:** 5 minutes
+* **Q\&A:** 3 minutes
+* **Presentation Format:** PPT/PDF
+
+Outstation schools whose participants are shortlisted may present virtually through **Microsoft Teams**.
+
+# **5\. General Guidelines**
+
+* Each school may submit **one entry**.
+* All artwork and design work must be original.
+* Participants may use stock images only if they are appropriately licensed and credited.
+* AI-generated artwork is **not permitted**.
+* AI may be used only for brainstorming, grammar refinement, or colour palette exploration. Any AI tools used must be acknowledged on the Credits slide.
+* Proper credit must be given for all external resources, fonts, icons, and images.
+* Judges' decisions will be final and binding.
+
+# **6\. Recommended Software**
+
+Participants may use any digital design software, including:
+
+* Adobe Photoshop
+* Adobe Illustrator
+* Photopea
+* GIMP
+* Canva
+* Figma
+* Affinity Designer
+* Inkscape
+* Krita
+
+7\. Event Timeline
+
+| Activity | Date |
+| ----- | ----- |
+| **Last Date of Registration** | **Friday, July 31, 2026** |
+| **Challenge Images Released** | **Saturday, August 1, 2026** |
+| **Online Submission Deadline** | **Thursday, August 6, 2026, 6:00 PM IST** |
+| **Shortlisted Participants Announced** | **Monday, August 10, 2026, 2:00 PM IST** |
+| **Grand Finale** | **Tuesday, August 18, 2026** |
+
+### **4\. SoundCraft Challenge**
+
+***Design. Build. Play.***
+
+**Venue: Design and Technology Lab, 4th Floor**
+**1\. Event Overview**
+
+| Event Name | SoundCraft Challenge |
+| :---- | :---- |
+| **Category** | **Design & Engineering Challenge** |
+| **Mode** | **Live Challenge (on-site)** |
+| **Number of Entries** | **One team per school** |
+| **Team Size** | **2â€“3 participants (Grades IXâ€“XII)** |
+
+**2\. Challenge**
+
+Inspired by the Techathlon 2026 theme "Imagining an Impactful Future," teams are challenged to transform simple everyday materials into functional musical instruments that demonstrate creativity, engineering, and design thinking.
+Using only the materials provided by the organisers, teams must design and construct one or more functional musical instruments capable of producing original sounds.The challenge encourages participants to explore how innovation can emerge from limited resources through creativity, collaboration, and iterative design.
+
+The event concludes with a short presentation and musical performance, where teams will demonstrate the construction & functionality of their instrument(s) and share the story behind their design.
+
+**3\. Event Format**
+Following a short briefing, each team will receive an identical material kit.
+Teams will have 2 hours to:
+
+* Brainstorm ideas
+* Design their instrument(s)
+* Build and refine their prototype(s)
+* Test sound quality and functionality
+
+At the end of the development phase, each team will deliver:
+
+* 1-2 minute verbal presentation (What kind of instrument/s made & how itâ€™s made)
+* 1-minute Musical Performance (Remix of an existing music or a new composition)
+* 2-minute Judges' Q\&A
+
+**5\. Material Kit (Provided by Organizer)**
+Each team will receive the sa me material kit containing:
+
+* Cardboard Sheet
+* Paper Cups
+* Rubber Bands
+* Ice Cream Sticks
+* Plastic Bottle
+* Drinking Straws
+* Cotton String
+* Bottle Caps
+* Balloon
+* Masking Tape
+* Glue
+* Scissors
+
+\*\* No additional materials may be brought into or used during the competition.
+
+**6\. Competition Guidelines**
+
+* Each school may register one team.
+* Teams must use only the materials provided by the organisers.
+* Instruments must be designed and constructed entirely during the competition.
+* Teams may build one or more instruments.
+* Every instrument must produce an audible sound.
+* Teams are encouraged to experiment, test, and refine their designs.
+* At least four different materials from the kit must be incorporated into the final design.
+* All team members must actively participate in the design, construction, and presentation.
+* Safety must be maintained throughout the competition.
+* Laptops, tablets, mobile phones and use of AI are not required.
+* The judges' decision will be final and binding.
+
+**7\. Final Presentation**
+Each team will have 3 minutes to present and perform.
+The presentation should include:
+
+* Introduction to the team and instrument(s)
+* Inspiration behind the design
+* How the instrument produces sound
+* Key design challenges encountered
+* Improvements made during testing and refinement
+* A short musical performance demonstrating the functionality of the instrument(s)
+
+This will be followed by 2 minutes of questions from the judging panel.
+
+**8\. Judging Criteria**
+
+| Creativity & Originality | Functionality & Sound Quality | Engineering & Craftsmanship | Design Process & Problem Solving | Presentation |
+| :---- | :---- | :---- | :---- | :---- |
+| **20** | **20** | **20** | **20** | **20** |
+`.replaceAll('\u00e2\u20ac\u201c', '\u2013').replaceAll('\u00e2\u20ac\u2122', '\u2019');
+
 const modalEvents = [
     {
         no: '01',
@@ -1552,25 +2010,101 @@ function renderModalSection(section) {
   `;
 }
 
+function escapeModalHtml(value) {
+    return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}
+
+function renderModalInline(value) {
+    return escapeModalHtml(value)
+        .replace(/\\([\\`*_{}\[\]()<>#+.!&-])/g, '$1')
+        .replace(/\[([^\]]+)\]\(([^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>')
+        .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>');
+}
+
+function renderModalMarkdown(source) {
+    const lines = source.trim().split(/\r?\n/);
+    const output = [];
+    let index = 0;
+
+    while (index < lines.length) {
+        const line = lines[index];
+        if (!line.trim()) {
+            index += 1;
+            continue;
+        }
+
+        if (/^\|/.test(line)) {
+            const tableLines = [];
+            while (index < lines.length && /^\|/.test(lines[index])) tableLines.push(lines[index++]);
+            const rows = tableLines.map((row) => row.split('|').slice(1, -1).map((cell) => cell.trim()));
+            const isDivider = (row) => row.every((cell) => /^:?-{3,}:?$/.test(cell));
+            const header = rows[0];
+            const body = rows.slice(1).filter((row) => !isDivider(row));
+            output.push(`<div class="modal-markdown-table"><table><thead><tr>${header.map((cell) => `<th>${renderModalInline(cell)}</th>`).join('')}</tr></thead><tbody>${body.map((row) => `<tr>${row.map((cell) => `<td>${renderModalInline(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+            continue;
+        }
+
+        const heading = line.match(/^#{1,6}\s+(.+)$/);
+        if (heading) {
+            output.push(`<h3>${renderModalInline(heading[1])}</h3>`);
+            index += 1;
+            continue;
+        }
+
+        const list = line.match(/^\*\s+(.+)$/);
+        const ordered = line.match(/^\d+\\?\.\s+(.+)$/);
+        if (list || ordered) {
+            const tag = ordered ? 'ol' : 'ul';
+            const items = [];
+            while (index < lines.length) {
+                const match = tag === 'ol' ? lines[index].match(/^\d+\\?\.\s+(.+)$/) : lines[index].match(/^\*\s+(.+)$/);
+                if (!match) break;
+                items.push(`<li>${renderModalInline(match[1])}</li>`);
+                index += 1;
+            }
+            output.push(`<${tag}>${items.join('')}</${tag}>`);
+            continue;
+        }
+
+        const paragraph = [];
+        while (index < lines.length && lines[index].trim() && !/^\||^#{1,6}\s+|^\*\s+|^\d+\\?\.\s+/.test(lines[index])) {
+            paragraph.push(lines[index++].trim());
+        }
+        output.push(`<p>${renderModalInline(paragraph.join(' '))}</p>`);
+    }
+
+    return `<section class="modal-section modal-source">${output.join('')}</section>`;
+}
+
+function getModalSource(eventNumber) {
+    const markers = {
+        '01': ['### **INNOVATEX CHALLENGE**', '### **2\\. AI for Good Lab**'],
+        '02': ['### **2\\. AI for Good Lab**', '# **Through the Lens**'],
+        '03': ['# **Through the Lens**', '### **4\\. SoundCraft Challenge**'],
+        '04': ['### **4\\. SoundCraft Challenge**'],
+    };
+    const [startMarker, endMarker] = markers[eventNumber];
+    const start = modalEventSource.indexOf(startMarker);
+    const end = endMarker ? modalEventSource.indexOf(endMarker) : modalEventSource.length;
+    return modalEventSource.slice(start, end === -1 ? modalEventSource.length : end);
+}
+
 function openModal(event) {
     if (!event) return;
     event = modalEvents.find((modalEvent) => modalEvent.no === event.no) || event;
     const dialog = document.getElementById('event-modal');
     dialog.querySelector('.modal-visual').dataset.seed = Number(event.no);
     dialog.querySelector('.modal-visual').dataset.mode = event.mode;
-    document.getElementById('modal-meta').textContent = `No. ${event.no} . ${event.mode}`;
+    const source = getModalSource(event.no);
+    document.getElementById('modal-meta').hidden = true;
     document.getElementById('modal-title').textContent = event.name;
     document.getElementById('modal-tag').textContent = event.tag;
-    document.getElementById('modal-long').textContent = event.long;
-    document.getElementById('modal-details').innerHTML = event.details
-        .map(
-            ([key, value]) => `
-    <div><span>${key}</span><strong>${value}</strong></div>
-  `,
-        )
-        .join('');
-    document.getElementById('modal-rules').innerHTML = event.rules.map((rule) => `<li>${rule}</li>`).join('');
-    document.getElementById('modal-sections').innerHTML = (event.sections || []).map(renderModalSection).join('');
+    document.getElementById('modal-long').hidden = true;
+    document.getElementById('modal-details').hidden = true;
+    document.getElementById('modal-rules').hidden = true;
+    document.getElementById('modal-sections').innerHTML = renderModalMarkdown(source);
     const modalBody = dialog.querySelector('.modal-body');
     modalBody.scrollTop = 0;
     renderGlyphs();
