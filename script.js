@@ -1084,10 +1084,8 @@ Each team will receive the sa me material kit containing:
 * Paper Cups
 * Rubber Bands
 * Ice Cream Sticks
-* Plastic Bottle
 * Drinking Straws
 * Cotton String
-* Bottle Caps
 * Balloon
 * Masking Tape
 * Glue
