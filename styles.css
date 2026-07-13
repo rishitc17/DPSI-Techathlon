@@ -2216,7 +2216,7 @@ h2 {
 .event-brief-modal .modal-source li {
     color: oklch(0.96 0.02 230 / 82%);
     font-size: 0.98rem;
-    line-height: 0.5;
+    line-height: 0.1;
 }
 
 .event-brief-modal .modal-source .brief-heading {
